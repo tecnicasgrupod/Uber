@@ -8,6 +8,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.BufferedWriter;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -17,42 +19,44 @@ import com.tecnicas_pucrs.FormaPagamento;
 
 public class PersistenciaMotoristas{
 
-    private static final String CSV_FILE_PATH = "motoristas.dat";   
 
 
-    public static List<Motorista> carregaMotoristas() throws FileNotFoundException, IOException{
+    public static List<Motorista> carregaMotoristas() throws FileNotFoundException, URISyntaxException, IOException{
+
         List<Motorista> listaMotorista = new ArrayList<>();
-        
+        URI csv_file_path = PersistenciaVeiculos.class.getResource("/motoristas.dat").toURI();
+
         try (
-            Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH));
+            Reader reader = Files.newBufferedReader(Paths.get(csv_file_path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
         ) {
             Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(reader);
             for (CSVRecord csvRecord : records) {
                 String cpf = csvRecord.get("cpf");
                 String nome = csvRecord.get("nome");
-                String veiculo = csvRecord.get("veiculo");
+                String placa = csvRecord.get("veiculo");
                 String pagamento = csvRecord.get("pagamento");
-                String pontuacaoMedia = csvRecord.get("pontuacaoMedia");
+                int pontuacaoMedia = Integer.parseInt(csvRecord.get("pontuacaoMedia"));
 
                 FormaPagamento enum_pagamento = FormaPagamento.CARTAO;
                 if (pagamento.equals("DINHEIRO")) enum_pagamento = FormaPagamento.DINHEIRO;
                 if (pagamento.equals("CARTAO")) enum_pagamento = FormaPagamento.CARTAO;
                 if (pagamento.equals("TODAS")) enum_pagamento = FormaPagamento.TODAS;
-                
-                // TODO ->  gets acima retornam strings mas o construtor Motorista(...) requer objeto Veiculo
 
-                //Motorista motorista = new Motorista(cpf, nome, obj_veiculo, enum_pagamento, int_pontuacaoMedia);
-                //listaMotorista.add(motorista);
+                Veiculo veiculo_do_motorista = ControleDeVeiculos.getVeiculo(placa);
+
+                Motorista motorista = new Motorista(cpf, nome, veiculo_do_motorista, enum_pagamento, pontuacaoMedia);
+                listaMotorista.add(motorista);
             }
         }
 
         return listaMotorista;
     }
 
-    public static boolean persisteMotoristas(List<Motorista> lst)throws IOException{
+    public static boolean persisteMotoristas(List<Motorista> lst)throws URISyntaxException, IOException{
         try {
-            BufferedWriter writer = Files.newBufferedWriter(Paths.get(CSV_FILE_PATH));
+            URI csv_file_path = PersistenciaVeiculos.class.getResource("/motoristas.dat").toURI();
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get(csv_file_path));
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
                     .withHeader("CPF", "Nome", "Veiculo", "Forma de Pagamento", "Pontuação Média"));
             for(Motorista m : lst){

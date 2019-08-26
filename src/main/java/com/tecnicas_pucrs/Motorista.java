@@ -10,6 +10,7 @@ public class Motorista{
     private Veiculo veiculo;
     private FormaPagamento pagamento;
     private int pontuacaoMedia;
+    private int contaCorridas;
 
     public Motorista(String cpf, String nome, Veiculo v, FormaPagamento f, int pont){
         this.cpf = cpf;
@@ -39,8 +40,25 @@ public class Motorista{
         return pontuacaoMedia;
     }
 
-    public void infoPontuacao(int pontuacao){
-
+    public void setPontuaçaoMedia(int media){
+        this.pontuacaoMedia = media;
     }
 
+    public void incrementaCorrida(){
+        contaCorridas++;
+    }
+
+    public void infoPontuacao(int pontuacao){
+        int nova_media = getPontuacaoMedia() + (pontuacao / contaCorridas);
+        setPontuaçaoMedia(nova_media);
+    }
+
+    @Override
+    public String toString() {
+        return  "cpf='" + cpf + '\'' +
+                ", nome='" + nome + '\'' +
+                ", veiculo=(" + veiculo + ")" +
+                ", pagamento=" + pagamento +
+                ", pontuacaoMedia=" + pontuacaoMedia;
+    }
 }
