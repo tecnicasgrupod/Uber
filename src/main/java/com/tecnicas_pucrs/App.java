@@ -12,30 +12,28 @@ public class App{
 
         ControleDeVeiculos controleVeiculos = new ControleDeVeiculos();
         ControleDePassageiros controlePassageiros = new ControleDePassageiros();
-        // TODO remover depois de completar classe PersistenciaMotoristas
-        //ControleDeMotoristas controleMotoristas = new ControleDeMotoristas();
+        ControleDeMotoristas controleMotoristas = new ControleDeMotoristas();
 
         System.out.println(" -----  Uber Tecnicas ------ ");
 
-        System.out.println("\n Lista de Veiculos carregados:");
+        System.out.println("\nLista de Veiculos carregados:");
         for (Veiculo v : controleVeiculos.getTodosVeiculos()){
             System.out.println(v);
         }
 
-        System.out.println("\n Lista de Motoristas carregados:");
-        // TODO remover depois de completar classe PersistenciaMotoristas
-        /*
-        for (Motorista m : controleMotoristas.getTodosMotoristas()){
-            System.out.println(v);
-        }
-        */
+        System.out.println("\nLista de Motoristas carregados:");
 
-        System.out.println("\n Lista de Passageiros carregados:");
+        for (Motorista m : controleMotoristas.getTodosMotoristas()){
+            System.out.println(m);
+        }
+
+
+        System.out.println("\nLista de Passageiros carregados:");
         for(Passageiro p :controlePassageiros.getTodosPassageiros()){
             System.out.println(p);
         }
-        
-        System.out.println("\n -----  Fim ------ ");
-        
+
+        System.out.println("\n-----  Fim ------ ");
+
     }
 }

@@ -8,7 +8,7 @@ import com.tecnicas_pucrs.CategoriaVeiculo;
 
 public class ControleDeVeiculos{
 
-    private List<Veiculo> list;
+    private static List<Veiculo> list;
 
     public ControleDeVeiculos(){
         try {
@@ -18,7 +18,7 @@ public class ControleDeVeiculos{
         }
     }
 
-    public Veiculo getVeiculo(String placa){
+    public static Veiculo getVeiculo(String placa){
 
         for(Veiculo v : list){
             if(placa.equals(v.getPlaca())){

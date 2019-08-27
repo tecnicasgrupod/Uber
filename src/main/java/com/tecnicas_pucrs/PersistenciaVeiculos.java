@@ -4,10 +4,11 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.csv.CSVPrinter;
-import java.io.IOException;
-import java.io.Reader;
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
+
+import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -17,14 +18,13 @@ import com.tecnicas_pucrs.CategoriaVeiculo;
 
 public class PersistenciaVeiculos{
 
-    private static final String CSV_FILE_PATH = "veiculos.dat";
-
-    public static List<Veiculo> carregaVeiculos() throws FileNotFoundException, IOException{
+    public static List<Veiculo> carregaVeiculos() throws FileNotFoundException, IOException, URISyntaxException{
 
         List<Veiculo> listVeiculos = new ArrayList<>();
+        URI csv_file_path = PersistenciaVeiculos.class.getResource("/veiculos.dat").toURI();
 
         try (
-            Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH));
+            Reader reader = Files.newBufferedReader(Paths.get(csv_file_path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
         ) {
             Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(reader);
@@ -33,23 +33,24 @@ public class PersistenciaVeiculos{
                 String marca = csvRecord.get("marca");
                 String cor = csvRecord.get("cor");
                 String categoria = csvRecord.get("categoria");
-                
+
                 CategoriaVeiculo cat = CategoriaVeiculo.SIMPLES;
                 if (categoria.equals("SIMPLES")) cat = CategoriaVeiculo.SIMPLES;
                 if (categoria.equals("NORMAL")) cat = CategoriaVeiculo.NORMAL;
                 if (categoria.equals("LUXO")) cat = CategoriaVeiculo.LUXO;
-                
+
                 Veiculo veiculo = new Veiculo(placa, marca, cor, cat);
                 listVeiculos.add(veiculo);
             }
-        }       
-    
+        }
+
         return listVeiculos;
     }
 
-    public static boolean persisteVeiculos(List<Veiculo> lst) throws IOException{
+    public static boolean persisteVeiculos(List<Veiculo> lst) throws IOException, URISyntaxException{
         try {
-            BufferedWriter writer = Files.newBufferedWriter(Paths.get(CSV_FILE_PATH));
+            URI csv_file_path = PersistenciaVeiculos.class.getResource("/veiculos.dat").toURI();
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get(csv_file_path));
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
                     .withHeader("placa", "marca", "cor", "categoria"));
             for(Veiculo v : lst){
