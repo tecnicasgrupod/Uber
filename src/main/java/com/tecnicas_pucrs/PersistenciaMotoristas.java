@@ -8,7 +8,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.BufferedWriter;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -19,15 +18,14 @@ import com.tecnicas_pucrs.FormaPagamento;
 
 public class PersistenciaMotoristas{
 
-
+    private static final String CSV_FILE_PATH = "motoristas.dat";
 
     public static List<Motorista> carregaMotoristas() throws FileNotFoundException, URISyntaxException, IOException{
 
         List<Motorista> listaMotorista = new ArrayList<>();
-        URI csv_file_path = PersistenciaVeiculos.class.getResource("/motoristas.dat").toURI();
 
         try (
-            Reader reader = Files.newBufferedReader(Paths.get(csv_file_path));
+            Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
         ) {
             Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(reader);
@@ -55,8 +53,7 @@ public class PersistenciaMotoristas{
 
     public static boolean persisteMotoristas(List<Motorista> lst)throws URISyntaxException, IOException{
         try {
-            URI csv_file_path = PersistenciaVeiculos.class.getResource("/motoristas.dat").toURI();
-            BufferedWriter writer = Files.newBufferedWriter(Paths.get(csv_file_path));
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get(CSV_FILE_PATH));
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
                     .withHeader("CPF", "Nome", "Veiculo", "Forma de Pagamento", "Pontuação Média"));
             for(Motorista m : lst){

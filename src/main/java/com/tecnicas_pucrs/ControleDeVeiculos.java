@@ -12,7 +12,7 @@ public class ControleDeVeiculos{
 
     public ControleDeVeiculos(){
         try {
-            this.list = PersistenciaVeiculos.carregaVeiculos();
+            list = PersistenciaVeiculos.carregaVeiculos();
         } catch (Exception e) {
             e.printStackTrace();
         }
