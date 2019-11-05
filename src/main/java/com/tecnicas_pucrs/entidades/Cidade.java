@@ -5,12 +5,12 @@ import java.util.List;
 
 import com.tecnicas_pucrs.entidades.Bairro;
 
-public class Cidades{
+public class Cidade {
 
     private String nome;
     private List<Bairro> listaDeBairros;
 
-    public Cidades(String nome){
+    public Cidade(String nome){
         this.nome = nome;
         this.listaDeBairros = new ArrayList<>();
     }
