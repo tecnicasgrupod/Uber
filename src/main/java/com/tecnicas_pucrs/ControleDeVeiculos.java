@@ -2,9 +2,9 @@ package com.tecnicas_pucrs;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.tecnicas_pucrs.PersistenciaVeiculos;
+
 import com.tecnicas_pucrs.Veiculo;
-import com.tecnicas_pucrs.CategoriaVeiculo;
+import com.tecnicas_pucrs.entidades.CategoriaVeiculo;
 
 public class ControleDeVeiculos{
 

@@ -1,9 +1,15 @@
 package com.tecnicas_pucrs.entidades;
-import com.tecnicas_pucrs.CategoriaVeiculo;
 
 public class VeiculoNormal extends Veiculo {
 
-    public VeiculoNormal(String placa, String marca, String cor, CategoriaVeiculo cat){
-        super(placa, marca, cor, cat);
+    public VeiculoNormal(String placa, String marca, String cor){
+        this.placa = placa;
+        this.marca = marca;
+        this.cor = cor;
+    }
+
+    @Override
+    public String toString(){
+        return this.placa + "," + this.marca + "," + this.cor + "," + "Normal";
     }
 }
