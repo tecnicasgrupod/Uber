@@ -1,6 +1,6 @@
-package com.tecnicas_pucrs;
+package com.tecnicas_pucrs.entidades;
 
-import com.tecnicas_pucrs.Veiculo;
+import com.tecnicas_pucrs.entidades.Veiculo;
 import com.tecnicas_pucrs.FormaPagamento;
 
 public class Motorista{
@@ -9,15 +9,16 @@ public class Motorista{
     private String nome;
     private Veiculo veiculo;
     private FormaPagamento pagamento;
-    private int pontuacaoMedia;
-    private int contaCorridas;
+    private int somatorioDeAvaliacoes;
+    private int quantidadeDeAvaliacoes;
 
-    public Motorista(String cpf, String nome, Veiculo v, FormaPagamento f, int pont){
+    public Motorista(String cpf, String nome, Veiculo v, FormaPagamento f){
         this.cpf = cpf;
         this.nome = nome;
         this.veiculo = v;
         this.pagamento = f;
-        this.pontuacaoMedia = pont;
+        this.somatorioDeAvaliacoes = 0;
+        this.quantidadeDeAvaliacoes = 0;
     }
 
     public String getCPF(){
@@ -31,27 +32,19 @@ public class Motorista{
     public Veiculo getVeiculo(){
         return veiculo;
     }
-
+    
     public FormaPagamento getFormaPagamento(){
         return pagamento;
     }
-
-    public int getPontuacaoMedia(){
-        return pontuacaoMedia;
+    
+    public int getSomatorioDeAvaliacoes(){
+        return somatorioDeAvaliacoes;
     }
 
-    public void setPontuaçaoMedia(int media){
-        this.pontuacaoMedia = media;
+    public void incrementaQuantidadeDeAvalicoes(){
+        this.quantidadeDeAvaliacoes++;
     }
 
-    public void incrementaCorrida(){
-        contaCorridas++;
-    }
-
-    public void infoPontuacao(int pontuacao){
-        int nova_media = getPontuacaoMedia() + (pontuacao / contaCorridas);
-        setPontuaçaoMedia(nova_media);
-    }
 
     @Override
     public String toString() {
@@ -59,6 +52,6 @@ public class Motorista{
                 ", nome='" + nome + '\'' +
                 ", veiculo=(" + veiculo + ")" +
                 ", pagamento=" + pagamento +
-                ", pontuacaoMedia=" + pontuacaoMedia;
+                ", somatorioDeAvaliacoes=" + somatorioDeAvaliacoes;
     }
 }

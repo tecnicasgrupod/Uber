@@ -1,4 +1,4 @@
-package com.tecnicas_pucrs;
+package com.tecnicas_pucrs.entidades;
 
 import com.tecnicas_pucrs.CategoriaVeiculo;
 
@@ -8,6 +8,7 @@ public class Veiculo {
     private String marca;
     private String cor;
     private CategoriaVeiculo cat;
+
 
     public Veiculo(String placa, String marca, String cor, CategoriaVeiculo cat){
         this.placa = placa;

@@ -1,4 +1,4 @@
-package com.tecnicas_pucrs;
+package com.tecnicas_pucrs.entidades;
 
 import com.tecnicas_pucrs.FormaPagamento;
 
