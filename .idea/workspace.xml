@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b67ec47f-df1f-4304-bc4b-b6abc508730d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Uber.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Uber.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/ControleDeMotoristas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/ControleDePassageiros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/ControleDeVeiculos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/FormaPagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/FormaPagamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/PersistenciaMotoristas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/PersistenciaPassageiros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/PersistenciaVeiculos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Motorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Motorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Passageiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Passageiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/VeiculosFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/VeiculosFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/geometria/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/geometria/Area.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/IRepoPassageiros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/IRepoPassageiros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/IRepoViagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/IRepoViagens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/RepoBairros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoBairros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/RepoCidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoCidades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/RepoMotoristas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoMotoristas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/RepoVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoVeiculos.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TCKBrFeGcUbXAOSjfvxNugJgh3" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="java in Uber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Uber" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="java" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.java in Uber" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b67ec47f-df1f-4304-bc4b-b6abc508730d" name="Default Changelist" comment="" />
+      <created>1572958505894</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572958505894</updated>
+      <workItem from="1572958511694" duration="4998000" />
+      <workItem from="1573132096483" duration="1845000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

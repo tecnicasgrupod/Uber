@@ -1,8 +1,5 @@
 package com.tecnicas_pucrs.entidades;
 
-import com.tecnicas_pucrs.entidades.Veiculo;
-import com.tecnicas_pucrs.FormaPagamento;
-
 public class Motorista{
     
     private String cpf;

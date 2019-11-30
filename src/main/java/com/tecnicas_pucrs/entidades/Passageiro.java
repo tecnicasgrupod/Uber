@@ -1,7 +1,5 @@
 package com.tecnicas_pucrs.entidades;
 
-import com.tecnicas_pucrs.FormaPagamento;
-
 public class Passageiro{
 
     private String cpf;

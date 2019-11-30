@@ -22,9 +22,9 @@ public class Area {
     }
     
     //public SituacaoReta classifica(Reta reta) {
-    
-    // TO DO: implementar Cohen e Shuterland
-    
+
+
+
     //}
     
     @Override

@@ -1,4 +1,4 @@
-package com.tecnicas_pucrs.interfaces;
+package com.tecnicas_pucrs.interfaces.repositorios;
 
 import com.tecnicas_pucrs.entidades.Motorista;
 import com.tecnicas_pucrs.entidades.Viagem;
