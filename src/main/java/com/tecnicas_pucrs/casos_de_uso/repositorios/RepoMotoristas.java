@@ -1,16 +1,14 @@
-package com.tecnicas_pucrs.interfaces.repositorios;
+package com.tecnicas_pucrs.casos_de_uso.repositorios;
 
 import com.tecnicas_pucrs.entidades.Motorista;
-import com.tecnicas_pucrs.entidades.Veiculo;
+import com.tecnicas_pucrs.interfaces.repositorios.IRepoMotoristas;
 import com.tecnicas_pucrs.persistencia.PersistenciaMotoristas;
-import com.tecnicas_pucrs.persistencia.PersistenciaVeiculos;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
 
-public class RepoMotoristas{
+public class RepoMotoristas implements IRepoMotoristas {
 
     private List<Motorista> motoristas;
 
@@ -18,11 +16,11 @@ public class RepoMotoristas{
         this.motoristas = PersistenciaMotoristas.carregaMotoristas();
     }
 
-    public List<Motorista> getMotoristas() throws IOException, URISyntaxException {
+    public List<Motorista> getMotoristas() {
         return this.motoristas;
     }
 
-    public Motorista recuperaPorCPF(String cpf){
+    public Motorista recuperarPorCPF(String cpf){
         for (Motorista v: this.motoristas) {
             if(v.getCPF().equals(cpf)){
                 return v;

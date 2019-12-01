@@ -1,14 +1,16 @@
 package com.tecnicas_pucrs.persistencia;
 
+import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoBairros;
+import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoCidades;
+import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoMotoristas;
+import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoPassageiros;
 import com.tecnicas_pucrs.entidades.*;
-import com.tecnicas_pucrs.interfaces.repositorios.*;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
 import java.io.*;
 import java.net.URISyntaxException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -35,12 +37,12 @@ public class PersistenciaViagens {
                 int id = Integer.parseInt(csvRecord.get("id"));
                 String data = csvRecord.get("dataHora");
                 String roteiro = csvRecord.get("roteiro");
-                Motorista motorista = repoMotoristas.recuperaPorCPF(csvRecord.get("motorista"));
-                Passageiro passageiro = repoPassegeiros.recuperaPorCPF(csvRecord.get("passageiro"));
+                Motorista motorista = repoMotoristas.recuperarPorCPF(csvRecord.get("motorista"));
+                Passageiro passageiro = repoPassegeiros.recuperarPorCPF(csvRecord.get("passageiro"));
                 double custo = Double.parseDouble(csvRecord.get("custo"));
                 String[] Lroteiros = roteiro.replace("[", "").replace("]", "").split(";");
 
-                Roteiro roteirow = new Roteiro(repoCidades.recuperaPorNome("canoas"), repoBairros.recuperaPorNome(Lroteiros[0]), repoBairros.recuperaPorNome(Lroteiros[1]));
+                Roteiro roteirow = new Roteiro(repoCidades.recuperarPorNome("canoas"), repoBairros.recuperarPorNome(Lroteiros[0]), repoBairros.recuperarPorNome(Lroteiros[1]));
 
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
                 Viagem viagem = new Viagem(id, LocalDateTime.parse(data, formatter),roteirow,motorista,passageiro,custo);

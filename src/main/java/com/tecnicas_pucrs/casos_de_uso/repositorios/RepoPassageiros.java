@@ -1,8 +1,9 @@
-package com.tecnicas_pucrs.interfaces.repositorios;
+package com.tecnicas_pucrs.casos_de_uso.repositorios;
 
 import com.tecnicas_pucrs.entidades.Motorista;
 import com.tecnicas_pucrs.entidades.Passageiro;
 import com.tecnicas_pucrs.entidades.Veiculo;
+import com.tecnicas_pucrs.interfaces.repositorios.IRepoPassageiros;
 import com.tecnicas_pucrs.persistencia.PersistenciaMotoristas;
 import com.tecnicas_pucrs.persistencia.PersistenciaPassageiros;
 import com.tecnicas_pucrs.persistencia.PersistenciaVeiculos;
@@ -12,7 +13,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RepoPassageiros {
+public class RepoPassageiros implements IRepoPassageiros {
 
     private List<Passageiro> passageiros;
 
@@ -24,12 +25,16 @@ public class RepoPassageiros {
         return this.passageiros;
     }
 
-    public Passageiro recuperaPorCPF(String cpf) {
+    public Passageiro recuperarPorCPF(String cpf) {
         for (Passageiro p : this.passageiros) {
             if (p.getCPF().equals(cpf)) {
                 return p;
             }
         }
         throw new IllegalArgumentException("Passageiro Inexistente");
+    }
+
+    public void atualizaPassageiro(Passageiro passageiro){
+        //TO DO
     }
 }

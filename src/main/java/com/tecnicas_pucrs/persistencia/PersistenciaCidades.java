@@ -1,7 +1,7 @@
 package com.tecnicas_pucrs.persistencia;
 
 import com.tecnicas_pucrs.entidades.*;
-import com.tecnicas_pucrs.interfaces.repositorios.RepoBairros;
+import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoBairros;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
@@ -30,7 +30,7 @@ public class PersistenciaCidades {
                 RepoBairros repoBairros = new RepoBairros();
 
                 for (String b : Lbairros) {
-                    listaDeBairro.add(repoBairros.recuperaPorNome(b));
+                    listaDeBairro.add(repoBairros.recuperarPorNome(b));
                 }
 
                 Cidade cidade = new Cidade(nome, listaDeBairro);

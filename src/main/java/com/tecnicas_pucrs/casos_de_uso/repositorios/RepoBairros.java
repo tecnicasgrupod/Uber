@@ -1,12 +1,13 @@
-package com.tecnicas_pucrs.interfaces.repositorios;
+package com.tecnicas_pucrs.casos_de_uso.repositorios;
 
 import com.tecnicas_pucrs.entidades.Bairro;
+import com.tecnicas_pucrs.interfaces.repositorios.IRepoBairros;
 import com.tecnicas_pucrs.persistencia.PersistenciaBairros;
 
 import java.io.IOException;
 import java.util.List;
 
-public class RepoBairros {
+public class RepoBairros implements IRepoBairros {
 
     private List<Bairro> bairros;
 
@@ -18,7 +19,7 @@ public class RepoBairros {
         return this.bairros;
     }
 
-    public Bairro recuperaPorNome(String nome) {
+    public Bairro recuperarPorNome(String nome) {
         for (Bairro b : this.bairros) {
             if (b.getNome().equals(nome)) {
                 return b;

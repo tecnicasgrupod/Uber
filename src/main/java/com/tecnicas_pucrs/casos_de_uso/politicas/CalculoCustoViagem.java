@@ -4,6 +4,7 @@ import com.tecnicas_pucrs.entidades.Bairro;
 import com.tecnicas_pucrs.entidades.CategoriaVeiculo;
 import com.tecnicas_pucrs.entidades.Roteiro;
 
+
 public class CalculoCustoViagem{
 
     private PoliticasDeCusto politica;

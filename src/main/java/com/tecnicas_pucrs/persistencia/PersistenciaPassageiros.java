@@ -2,10 +2,7 @@ package com.tecnicas_pucrs.persistencia;
 
 
 import com.tecnicas_pucrs.entidades.FormaPagamento;
-import com.tecnicas_pucrs.entidades.Motorista;
 import com.tecnicas_pucrs.entidades.Passageiro;
-import com.tecnicas_pucrs.entidades.Veiculo;
-import com.tecnicas_pucrs.interfaces.repositorios.RepoVeiculos;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;

@@ -1,6 +1,6 @@
 package com.tecnicas_pucrs;
 
-import com.tecnicas_pucrs.interfaces.repositorios.*;
+import com.tecnicas_pucrs.casos_de_uso.repositorios.*;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
