@@ -2,6 +2,7 @@ package com.tecnicas_pucrs.casos_de_uso.repositorios;
 
 import com.tecnicas_pucrs.entidades.Veiculo;
 import com.tecnicas_pucrs.interfaces.repositorios.IRepoVeiculos;
+import com.tecnicas_pucrs.persistencia.PersistenciaBairros;
 import com.tecnicas_pucrs.persistencia.PersistenciaVeiculos;
 
 import java.io.IOException;
@@ -14,6 +15,15 @@ public class RepoVeiculos implements IRepoVeiculos {
 
     public RepoVeiculos() throws IOException, URISyntaxException {
         this.veiculos = PersistenciaVeiculos.carregaVeiculos();
+    }
+
+    public boolean persisteVeiculos(){
+        try {
+            return PersistenciaVeiculos.persisteVeiculos(veiculos);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public List<Veiculo> getVeiculos() {

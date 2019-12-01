@@ -4,10 +4,7 @@ import com.tecnicas_pucrs.entidades.Cidade;
 import com.tecnicas_pucrs.entidades.Motorista;
 import com.tecnicas_pucrs.entidades.Veiculo;
 import com.tecnicas_pucrs.entidades.Viagem;
-import com.tecnicas_pucrs.persistencia.PersistenciaCidades;
-import com.tecnicas_pucrs.persistencia.PersistenciaMotoristas;
-import com.tecnicas_pucrs.persistencia.PersistenciaVeiculos;
-import com.tecnicas_pucrs.persistencia.PersistenciaViagens;
+import com.tecnicas_pucrs.persistencia.*;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -20,6 +17,15 @@ public class RepoViagens {
 
     public RepoViagens() throws IOException, URISyntaxException {
         this.viagens = PersistenciaViagens.carregaViagens();
+    }
+
+    public boolean persisteViagens(){
+        try {
+            return PersistenciaViagens.persisteViagens(viagens);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public List<Viagem> getViagens() {

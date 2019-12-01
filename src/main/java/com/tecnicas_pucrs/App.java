@@ -77,5 +77,12 @@ public class App extends Application {
 
         launch(args);
 
+        repoVeiculos.persisteVeiculos();
+        repoMotoristas.persisteMotoristas();
+        repoPassageiros.persistePassageiros();
+        repoBairros.persisteBairros();
+        repoCidades.persisteCidades();
+        repoViagens.persisteViagens();
+
     }
 }

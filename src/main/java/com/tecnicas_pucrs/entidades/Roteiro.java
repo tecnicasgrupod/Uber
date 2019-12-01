@@ -1,5 +1,12 @@
 package com.tecnicas_pucrs.entidades;
 
+import com.tecnicas_pucrs.entidades.geometria.Ponto;
+import com.tecnicas_pucrs.entidades.geometria.Reta;
+import com.tecnicas_pucrs.entidades.geometria.SituacaoDaReta;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Roteiro {
 
     private Cidade cidade;
@@ -12,12 +19,31 @@ public class Roteiro {
         this.bairroDestino = bairroDestino;
     }
 
+    public List<Bairro> bairrosPercorridos(){
+        return cidade
+                .getListaDeBairros()
+                .stream()
+                .filter(b->b.getLimites().classifica(this.getRota())!= SituacaoDaReta.TODA_FORA)
+                .collect(Collectors.toList());
+    }
+
+    public Reta getRota(){
+        Ponto pOrig = bairroOrigem.getLimites().pontoCentral();
+        Ponto pDest = bairroOrigem.getLimites().pontoCentral();
+        return new Reta(pOrig,pDest);
+    }
+
     @Override
+    public String toString() {
+        return bairroOrigem + ";" + bairroDestino ;
+    }
+
+    /*@Override
     public String toString() {
         return "Roteiro{" +
                 "cidade=" + cidade +
                 ", bairroOrigem=" + bairroOrigem +
                 ", bairroDestino=" + bairroDestino +
                 '}';
-    }
+    }*/
 }

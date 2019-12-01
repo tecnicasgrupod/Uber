@@ -6,10 +6,11 @@ public class VeiculoSimples extends Veiculo {
         this.placa = placa;
         this.marca = marca;
         this.cor = cor;
+        this.cat = CategoriaVeiculo.SIMPLES;
     }
 
     @Override
     public String toString(){
-        return this.placa + "," + this.marca + "," + this.cor + "," + "Normal";
+        return this.placa + "," + this.marca + "," + this.cor + "," + "SIMPLES";
     }
 }

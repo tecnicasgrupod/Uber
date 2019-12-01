@@ -2,6 +2,7 @@ package com.tecnicas_pucrs.casos_de_uso.repositorios;
 
 import com.tecnicas_pucrs.entidades.Motorista;
 import com.tecnicas_pucrs.interfaces.repositorios.IRepoMotoristas;
+import com.tecnicas_pucrs.persistencia.PersistenciaBairros;
 import com.tecnicas_pucrs.persistencia.PersistenciaMotoristas;
 
 import java.io.IOException;
@@ -14,6 +15,15 @@ public class RepoMotoristas implements IRepoMotoristas {
 
     public RepoMotoristas() throws IOException, URISyntaxException {
         this.motoristas = PersistenciaMotoristas.carregaMotoristas();
+    }
+
+    public boolean persisteMotoristas(){
+        try {
+            return PersistenciaMotoristas.persisteMotoristas(motoristas);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public List<Motorista> getMotoristas() {

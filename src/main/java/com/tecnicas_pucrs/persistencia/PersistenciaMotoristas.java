@@ -6,14 +6,19 @@ import com.tecnicas_pucrs.entidades.Motorista;
 import com.tecnicas_pucrs.entidades.Veiculo;
 import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoVeiculos;
 import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
 
 import java.io.*;
 import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PersistenciaMotoristas {
+
+    private static final String CSV_FILE_PATH = "motoistas.dat";
 
     public static List<Motorista> carregaMotoristas() throws URISyntaxException, IOException {
 
@@ -46,14 +51,14 @@ public class PersistenciaMotoristas {
         return listaMotorista;
     }
 
-    /**
+
     public static boolean persisteMotoristas(List<Motorista> lst) throws URISyntaxException, IOException {
         try {
             BufferedWriter writer = Files.newBufferedWriter(Paths.get(CSV_FILE_PATH));
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
-                    .withHeader("CPF", "Nome", "Veiculo", "Forma de Pagamento", "Pontuação Média"));
+                    .withHeader("cpf", "bome", "veiculo", "pagamento", "pontuacaoMedia"));
             for (Motorista m : lst) {
-                csvPrinter.printRecord(m.getCPF(), m.getNome(), m.getVeiculo(), m.getFormaPagamento(), m.getPontuacaoMedia());
+                csvPrinter.printRecord(m.getCPF(), m.getNome(), m.getVeiculo().getPlaca(), m.getFormaPagamento(), m.getPontuacaoMedia());
             }
             csvPrinter.flush();
             csvPrinter.close();
@@ -63,5 +68,4 @@ public class PersistenciaMotoristas {
             return false;
         }
     }
-     **/
 }

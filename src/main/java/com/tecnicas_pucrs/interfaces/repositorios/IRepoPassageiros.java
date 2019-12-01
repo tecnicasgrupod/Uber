@@ -10,6 +10,4 @@ public interface IRepoPassageiros {
 
     public List<Passageiro> getPassageiros();
 
-    public void atualizaPassageiro(Passageiro passageiro);
-
 }

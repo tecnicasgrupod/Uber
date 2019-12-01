@@ -9,12 +9,12 @@ public class Passageiro{
     private double pontuacaoMedia;
     private int countAvaliacoes;
 
-    public Passageiro(String nome, String cpf, FormaPagamento formaPagamento, String nroCartao, int pontuacaoMedio){
+    public Passageiro(String nome, String cpf, FormaPagamento formaPagamento, String nroCartao, double pontuacaoMedia){
         this.cpf = cpf;
         this.nome = nome;
         this.formaPagamento = formaPagamento;
         this.nroCartao = nroCartao;
-        this.pontuacaoMedia = pontuacaoMedio;
+        this.pontuacaoMedia = pontuacaoMedia;
     } 
 
     public String getCPF(){
