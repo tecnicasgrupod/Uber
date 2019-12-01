@@ -48,7 +48,7 @@
             </ImageView>
             <Pane layoutX="394.0" layoutY="45.0" prefHeight="373.0" prefWidth="346.0" style="-fx-background-color: #000;">
                <children>
-                  <ChoiceBox fx:id="avaliacao" layoutX="93.0" layoutY="279.0" prefHeight="43.0" prefWidth="197.0" style="-fx-background-color: #fff;" />
+                  <ChoiceBox fx:id="avaliacao" layoutX="93.0" layoutY="279.0" prefHeight="43.0" prefWidth="197.0" style="-fx-background-color: #fff;" stylesheets="@../style/style.css" />
                   <ImageView fitHeight="43.0" fitWidth="44.0" layoutX="28.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/ic_avaliacao.png" />
