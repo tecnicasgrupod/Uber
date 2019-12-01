@@ -6,7 +6,9 @@ import com.tecnicas_pucrs.casos_de_uso.repositorios.*;
 import com.tecnicas_pucrs.entidades.*;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Fachada {
@@ -29,8 +31,23 @@ public class Fachada {
         this.viagens = viagens;
     }
 
-    public Motorista buscaMotoristaPorCPF(String cpf){
-        return motoristas.recuperarPorCPF(cpf);
+    public HashMap<String, String> buscaMotoristaPorCPF(String cpf){
+        Motorista motoristaAtual = motoristas.recuperarPorCPF(cpf);
+        HashMap<String, String> motoristaRequest = new HashMap<>();
+        motoristaRequest.put("cpfMotorista", motoristaAtual.getCPF());
+        motoristaRequest.put("nome", motoristaAtual.getNome());
+        return motoristaRequest;
+    }
+
+    public HashMap<String, String> buscaViagemPorId(int id){
+        Viagem viagemAtual = viagens.recuperaPorId(id);
+        HashMap<String, String> viagemRequest = new HashMap<>();
+        viagemRequest.put("cpfPassageiro", viagemAtual.getPassageiro().getCPF());
+        viagemRequest.put("data", DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").format(viagemAtual.getDataHora()));
+        viagemRequest.put("bairroOrigem", viagemAtual.getRoteiro().getBairroOrigem().getNome());
+        viagemRequest.put("bairroDestino", viagemAtual.getRoteiro().getBairroDestino().getNome());
+        viagemRequest.put("custo", Double.toString(viagemAtual.getCusto()));
+        return viagemRequest;
     }
 
     public List<Integer> recuperaViagensDoMotorista(String cpfMotorista) {
@@ -46,6 +63,11 @@ public class Fachada {
         }
 
         return viagensDoMotorista;
+    }
+
+    public void avaliaPassageiro(String cpfPassageiro, String nota) {
+        Passageiro passageiro = passageiros.recuperarPorCPF(cpfPassageiro);
+        passageiro.informaPontuacao(Integer.parseInt(nota));
     }
 
 /**

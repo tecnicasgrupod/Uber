@@ -38,12 +38,15 @@ public class Roteiro {
         return bairroOrigem + ";" + bairroDestino ;
     }
 
-    /*@Override
-    public String toString() {
-        return "Roteiro{" +
-                "cidade=" + cidade +
-                ", bairroOrigem=" + bairroOrigem +
-                ", bairroDestino=" + bairroDestino +
-                '}';
-    }*/
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public Bairro getBairroOrigem() {
+        return bairroOrigem;
+    }
+
+    public Bairro getBairroDestino() {
+        return bairroDestino;
+    }
 }

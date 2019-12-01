@@ -7,8 +7,6 @@ import com.tecnicas_pucrs.casos_de_uso.politicas.MotoristaEquivalente;
 import com.tecnicas_pucrs.casos_de_uso.politicas.PrecoIntegro;
 import com.tecnicas_pucrs.casos_de_uso.politicas.SeletorDeMotorista;
 import com.tecnicas_pucrs.casos_de_uso.repositorios.*;
-import com.tecnicas_pucrs.entidades.Motorista;
-import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -29,6 +27,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -97,8 +96,8 @@ public class DadosDoMotoristaController implements Initializable {
         btn_buscar.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
                 try {
-                    Motorista m = fachada.buscaMotoristaPorCPF(cpf_motorista.getText());
-                    nomeDoMotoristaAtual = m.getNome();
+                    HashMap<String, String> res = fachada.buscaMotoristaPorCPF(cpf_motorista.getText());
+                    nomeDoMotoristaAtual = res.get("nome");
                     viagensDoMotoristaAtual = fachada.recuperaViagensDoMotorista(cpf_motorista.getText());
 
                     ((Node) (event.getSource())).getScene().getWindow().hide();
@@ -127,18 +126,19 @@ public class DadosDoMotoristaController implements Initializable {
                     stage.centerOnScreen();
 
                     stage.show();
-                } catch (IOException e) {
-                    System.out.println("Motorista Inválido");
+                } catch (Exception e) {
+                    cpf_motorista.setStyle("-fx-border-color: red ; -fx-border-width: 2px ;");
+                    //System.out.println("Motorista Inválido");
                 }
             }
         });
     }
 
-    public String retornaNome(){
+    public String retornaNome() {
         return nomeDoMotoristaAtual;
     }
 
-    public List<Integer> retornaViagens(){
+    public List<Integer> retornaViagens() {
         return viagensDoMotoristaAtual;
     }
 

@@ -1,6 +1,7 @@
 package com.tecnicas_pucrs.interfaces.javafx;
 
 
+import com.tecnicas_pucrs.entidades.Motorista;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -29,10 +30,10 @@ import java.util.ResourceBundle;
 public class DadosDoMotorista2Controller implements Initializable {
 
     @FXML
-    private Button btn_buscar;
+    private Button btn_avaliar;
 
     @FXML
-    private Button btn_close;
+    private Button btn_finalizar;
 
     @FXML
     private Button btn_voltar;
@@ -43,11 +44,15 @@ public class DadosDoMotorista2Controller implements Initializable {
     @FXML
     private ListView viagens;
 
+    static int viagemAtual;
+
     private double x;
     private double y;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        btn_avaliar.setDisable(true);
 
         DadosDoMotoristaController dadosDoMotoristaAtual = null;
         try {
@@ -61,8 +66,8 @@ public class DadosDoMotorista2Controller implements Initializable {
 
         List<Integer> viagensDoMotoristaAtual = dadosDoMotoristaAtual.retornaViagens();
 
-        for (Integer i: viagensDoMotoristaAtual) {
-            viagens.getItems().add("Viagem "+i);
+        for (Integer i : viagensDoMotoristaAtual) {
+            viagens.getItems().add("Viagem: " + i);
         }
 
         btn_voltar.setOnAction(new EventHandler<ActionEvent>() {
@@ -98,11 +103,97 @@ public class DadosDoMotorista2Controller implements Initializable {
                 }
             }
         });
+
+        btn_finalizar.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                ((Node) (event.getSource())).getScene().getWindow().hide();
+                try {
+                    Parent root = FXMLLoader.load(getClass().getResource("/views/DadosDoMotorista.fxml"));
+                    root.setOnMousePressed(new EventHandler<MouseEvent>() {
+                        public void handle(MouseEvent event) {
+                            x = event.getSceneX();
+                            y = event.getSceneY();
+                        }
+                    });
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                        public void handle(MouseEvent event) {
+                            stage.setX(event.getScreenX() - x);
+                            stage.setY(event.getScreenY() - y);
+                        }
+                    });
+                    stage.setScene(scene);
+                    stage.setTitle("UBER");
+                    stage.initStyle(StageStyle.UNDECORATED);
+                    stage.initStyle(StageStyle.TRANSPARENT);
+                    Image applicationIcon = new Image(getClass().getResourceAsStream("/img/logo.png"));
+                    stage.getIcons().add(applicationIcon);
+                    stage.setScene(scene);
+                    stage.centerOnScreen();
+                    stage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        btn_avaliar.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                try {
+                    String viagemSelecionada = viagens.getSelectionModel().getSelectedItem().toString();
+                    viagemAtual = Integer.parseInt(viagemSelecionada.replace("Viagem: ", ""));
+                    ((Node) (event.getSource())).getScene().getWindow().hide();
+                    Parent root = FXMLLoader.load(getClass().getResource("/views/AvaliacaoPassageiro.fxml"));
+                    root.setOnMousePressed(new EventHandler<MouseEvent>() {
+                        public void handle(MouseEvent event) {
+                            x = event.getSceneX();
+                            y = event.getSceneY();
+                        }
+                    });
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                        public void handle(MouseEvent event) {
+                            stage.setX(event.getScreenX() - x);
+                            stage.setY(event.getScreenY() - y);
+                        }
+                    });
+                    stage.setScene(scene);
+                    stage.setTitle("UBER");
+                    stage.initStyle(StageStyle.UNDECORATED);
+                    stage.initStyle(StageStyle.TRANSPARENT);
+                    Image applicationIcon = new Image(getClass().getResourceAsStream("/img/logo.png"));
+                    stage.getIcons().add(applicationIcon);
+                    stage.setScene(scene);
+                    stage.centerOnScreen();
+
+                    stage.show();
+                } catch (Exception e) {
+
+                }
+            }
+        });
+
+        viagens.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+              if (viagens.getSelectionModel().getSelectedItem() != null){
+                  btn_avaliar.setDisable(false);
+              }else{
+                  btn_avaliar.setDisable(true);
+              }
+            }
+        });
     }
 
     public void exit() {
         System.exit(0);
     }
 
+    public int getViagemAtual(){
+        return viagemAtual;
+    }
 
 }
