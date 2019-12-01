@@ -51,8 +51,14 @@ public class Passageiro{
     }
 
     @Override
-    public String toString(){
-        return getNome() + "," + getCPF() + "," + getPontuacaoMedia();
+    public String toString() {
+        return "Passageiro{" +
+                "cpf='" + cpf + '\'' +
+                ", nome='" + nome + '\'' +
+                ", formaPagamento=" + formaPagamento +
+                ", nroCartao='" + nroCartao + '\'' +
+                ", pontuacaoMedia=" + pontuacaoMedia +
+                ", countAvaliacoes=" + countAvaliacoes +
+                '}';
     }
-
 }

@@ -1,17 +1,18 @@
 package com.tecnicas_pucrs.entidades;
 
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Viagem {
 
     private int id;
-    private LocalTime dataHora;
+    private LocalDateTime dataHora;
     private Roteiro roteiro;
     private Motorista motorista;
     private Passageiro passageiro;
     private double custo;
 
-    public Viagem(int id, LocalTime dataHora, Roteiro roteiro, Motorista motorista, Passageiro passageiro, double custo) {
+    public Viagem(int id, LocalDateTime dataHora, Roteiro roteiro, Motorista motorista, Passageiro passageiro, double custo) {
         this.id = id;
         this.dataHora = dataHora;
         this.roteiro = roteiro;
@@ -28,11 +29,11 @@ public class Viagem {
         this.id = id;
     }
 
-    public LocalTime getDataHora() {
+    public LocalDateTime getDataHora() {
         return dataHora;
     }
 
-    public void setDataHora(LocalTime dataHora) {
+    public void setDataHora(LocalDateTime dataHora) {
         this.dataHora = dataHora;
     }
 
@@ -66,5 +67,17 @@ public class Viagem {
 
     public void setCusto(double custo) {
         this.custo = custo;
+    }
+
+    @Override
+    public String toString() {
+        return "Viagem{" +
+                "id=" + id +
+                ", dataHora=" + dataHora +
+                ", roteiro=" + roteiro +
+                ", motorista=" + motorista +
+                ", passageiro=" + passageiro +
+                ", custo=" + custo +
+                '}';
     }
 }

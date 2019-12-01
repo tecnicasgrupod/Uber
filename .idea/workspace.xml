@@ -2,28 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b67ec47f-df1f-4304-bc4b-b6abc508730d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Uber.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Uber.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/ControleDeMotoristas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/ControleDePassageiros.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/ControleDeVeiculos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/FormaPagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/FormaPagamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/PersistenciaMotoristas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/PersistenciaPassageiros.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/PersistenciaVeiculos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Bairro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Bairro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Cidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Cidade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Motorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Motorista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Passageiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Passageiro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/VeiculosFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/VeiculosFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Roteiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Roteiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Veiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/VeiculoLuxo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/VeiculoLuxo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/VeiculoSimples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/VeiculoSimples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Viagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Viagem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/geometria/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/geometria/Area.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/IRepoPassageiros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/IRepoPassageiros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/IRepoViagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/IRepoViagens.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/RepoBairros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoBairros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/RepoCidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoCidades.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/RepoMotoristas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoMotoristas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/RepoVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoVeiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/geometria/Ponto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/geometria/Ponto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/geometria/Reta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/geometria/Reta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoBairros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoBairros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoCidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoCidades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoMotoristas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoMotoristas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoVeiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Bairro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Bairro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/CategoriaVeiculo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/CategoriaVeiculo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Cidade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Cidade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/FormaPagamento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/FormaPagamento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Motorista.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Motorista.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Passageiro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Passageiro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Roteiro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Roteiro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Veiculo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Veiculo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoLuxo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoLuxo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoNormal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoNormal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoSimples.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoSimples.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculosFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculosFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Viagem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Viagem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/geometria/Area.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/geometria/Area.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/geometria/Ponto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/geometria/Ponto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/geometria/Reta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/geometria/Reta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/interfaces/repositorios/IRepoPassageiros.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/interfaces/repositorios/IRepoPassageiros.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/interfaces/repositorios/IRepoViagens.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/interfaces/repositorios/IRepoViagens.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +50,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -48,11 +66,17 @@
     </option>
   </component>
   <component name="ProjectId" id="1TCKBrFeGcUbXAOSjfvxNugJgh3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../uber-project-50b4c9f582e6cfa3a24e70419033a8d71db83f35" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -62,19 +86,33 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tecnicas_pucrs.App" />
+      <module name="Uber" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tecnicas_pucrs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CohenSutherland" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tecnicas_pucrs.entidades.geometria.CohenSutherland" />
+      <module name="Uber" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tecnicas_pucrs.entidades.geometria.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="java in Uber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Uber" />
       <extension name="coverage">
@@ -91,9 +129,23 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.CohenSutherland" />
         <item itemvalue="JUnit.java in Uber" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -107,6 +159,7 @@
       <updated>1572958505894</updated>
       <workItem from="1572958511694" duration="4998000" />
       <workItem from="1573132096483" duration="1845000" />
+      <workItem from="1575144589736" duration="15204000" />
     </task>
     <servers />
   </component>
@@ -125,5 +178,39 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="532" y="235" width="526" height="383" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575151629538">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="532" y="235" width="526" height="383" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1575151629538" />
+    <state x="608" y="133" width="488" height="587" key="#com.intellij.ide.util.MemberChooser" timestamp="1575161489412">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="608" y="133" width="488" height="587" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1575161489412" />
+    <state x="648" y="321" width="303" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575144701781">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="648" y="321" width="303" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1600.860@0.0.1600.860" timestamp="1575144701781" />
+    <state x="583" y="187" width="424" height="479" key="FileChooserDialogImpl" timestamp="1575155213223">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="583" y="187" width="424" height="479" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1575155213223" />
+    <state width="1558" height="217" key="GridCell.Tab.0.bottom" timestamp="1575162420233">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
+    <state width="1558" height="217" key="GridCell.Tab.0.center" timestamp="1575162420233">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
+    <state width="1558" height="217" key="GridCell.Tab.0.left" timestamp="1575162420233">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
+    <state width="1558" height="217" key="GridCell.Tab.0.right" timestamp="1575162420233">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
   </component>
 </project>

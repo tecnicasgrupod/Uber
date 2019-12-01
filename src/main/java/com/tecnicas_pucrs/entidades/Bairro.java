@@ -14,7 +14,7 @@ public class Bairro{
         this.custoBasico = custoBasico;
     }
 
-    public String nome(){
+    public String getNome(){
         return this.nome;
     }
 
@@ -26,4 +26,12 @@ public class Bairro{
         return this.custoBasico;
     }
 
+    @Override
+    public String toString() {
+        return "Bairro{" +
+                "nome='" + nome + '\'' +
+                ", limites=" + limites +
+                ", custoBasico=" + custoBasico +
+                '}';
+    }
 }

@@ -8,14 +8,16 @@ public class Motorista{
     private FormaPagamento pagamento;
     private int somatorioDeAvaliacoes;
     private int quantidadeDeAvaliacoes;
+    private int pontuacaoMedia;
 
-    public Motorista(String cpf, String nome, Veiculo v, FormaPagamento f){
+    public Motorista(String cpf, String nome, Veiculo v, FormaPagamento f, int pontuacaoMedia){
         this.cpf = cpf;
         this.nome = nome;
         this.veiculo = v;
         this.pagamento = f;
         this.somatorioDeAvaliacoes = 0;
         this.quantidadeDeAvaliacoes = 0;
+        this.pontuacaoMedia = pontuacaoMedia;
     }
 
     public String getCPF(){
@@ -42,6 +44,9 @@ public class Motorista{
         this.quantidadeDeAvaliacoes++;
     }
 
+    public int getPontuacaoMedia() {
+        return pontuacaoMedia;
+    }
 
     @Override
     public String toString() {

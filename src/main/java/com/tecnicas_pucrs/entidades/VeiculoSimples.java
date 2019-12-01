@@ -7,4 +7,9 @@ public class VeiculoSimples extends Veiculo {
         this.marca = marca;
         this.cor = cor;
     }
+
+    @Override
+    public String toString(){
+        return this.placa + "," + this.marca + "," + this.cor + "," + "Normal";
+    }
 }

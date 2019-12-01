@@ -1,8 +1,9 @@
 package com.tecnicas_pucrs.entidades.geometria;
 
-public class Area {
+public class Area { //PRONTA
 
     private Ponto pSupEsq, pInfDir;
+    private CohenSutherland cs = new CohenSutherland();
 
     public Area(Ponto pSupEsq, Ponto pInfDir) {
         if ((pSupEsq.getX() >= pInfDir.getX()) || (pSupEsq.getY() <= pInfDir.getY())) {
@@ -12,23 +13,29 @@ public class Area {
             this.pInfDir = pInfDir;
         }
     }
-    
+
     public Ponto getPSupEsq() {
         return pSupEsq;
     }
-    
+
     public Ponto getPInfDir() {
         return pInfDir;
     }
-    
-    //public SituacaoReta classifica(Reta reta) {
 
+    public SituacaoDaReta classifica(Reta reta) {
+        if(cs.totalmenteDentro(reta.getP1(), reta.getP2(), pInfDir, pSupEsq)){
+            return SituacaoDaReta.TODA_DENTRO;
+        }else if(cs.totalmenteFora(reta.getP1(), reta.getP2(), pInfDir, pSupEsq)){
+            return SituacaoDaReta.TODA_FORA;
+        }else if(cs.intersect(reta.getP1(), reta.getP2(), pInfDir, pSupEsq)){
+            return SituacaoDaReta.INTERSECT;
+        }else{
+            throw new IllegalArgumentException("Invalid value");
+        }
+    }
 
-
-    //}
-    
     @Override
     public String toString() {
-        return "Area [pInfDir=" + pInfDir + ", pSupEsq=" + pSupEsq + "]"; 
-    } 
+        return "Area [pInfDir=" + pInfDir + ", pSupEsq=" + pSupEsq + "]";
+    }
 } 

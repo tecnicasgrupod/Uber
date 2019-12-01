@@ -10,12 +10,12 @@ public class Cidade {
     private String nome;
     private List<Bairro> listaDeBairros;
 
-    public Cidade(String nome){
+    public Cidade(String nome, List<Bairro> listaDeBairros){
         this.nome = nome;
-        this.listaDeBairros = new ArrayList<>();
+        this.listaDeBairros = listaDeBairros;
     }
 
-    public String nome(){
+    public String getNome(){
         return this.nome;
     }
 
@@ -23,4 +23,11 @@ public class Cidade {
         return this.listaDeBairros;
     }
 
+    @Override
+    public String toString() {
+        return "Cidade{" +
+                "nome='" + nome + '\'' +
+                ", listaDeBairros=" + listaDeBairros +
+                '}';
+    }
 }
