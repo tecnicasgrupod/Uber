@@ -1,4 +1,4 @@
-package com.tecnicas_pucrs.casos de uso.politicas;
+package com.tecnicas_pucrs.casos_de_uso.politicas;
 
 public class CalculoCustoViagem{
 

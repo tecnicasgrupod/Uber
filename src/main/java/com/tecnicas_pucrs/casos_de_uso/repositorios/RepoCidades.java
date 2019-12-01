@@ -1,18 +1,14 @@
-package com.tecnicas_pucrs.interfaces.repositorios;
+package com.tecnicas_pucrs.casos_de_uso.repositorios;
 
 import com.tecnicas_pucrs.entidades.Cidade;
-import com.tecnicas_pucrs.entidades.Motorista;
-import com.tecnicas_pucrs.entidades.Veiculo;
+import com.tecnicas_pucrs.interfaces.repositorios.IRepoCidades;
 import com.tecnicas_pucrs.persistencia.PersistenciaCidades;
-import com.tecnicas_pucrs.persistencia.PersistenciaMotoristas;
-import com.tecnicas_pucrs.persistencia.PersistenciaVeiculos;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
 
-public class RepoCidades {
+public class RepoCidades implements IRepoCidades {
 
     private List<Cidade> cidades;
 
@@ -24,7 +20,7 @@ public class RepoCidades {
         return this.cidades;
     }
 
-    public Cidade recuperaPorNome(String nome) {
+    public Cidade recuperarPorNome(String nome) {
         for (Cidade c : this.cidades) {
             if (c.getNome().equals(nome)) {
                 return c;

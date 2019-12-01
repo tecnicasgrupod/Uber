@@ -4,7 +4,7 @@ package com.tecnicas_pucrs.persistencia;
 import com.tecnicas_pucrs.entidades.FormaPagamento;
 import com.tecnicas_pucrs.entidades.Motorista;
 import com.tecnicas_pucrs.entidades.Veiculo;
-import com.tecnicas_pucrs.interfaces.repositorios.RepoVeiculos;
+import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoVeiculos;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
@@ -36,7 +36,7 @@ public class PersistenciaMotoristas {
                 if (pagamento.equals("CARTAO")) enum_pagamento = FormaPagamento.CARTAO;
                 if (pagamento.equals("TODAS")) enum_pagamento = FormaPagamento.TODAS;
 
-                Veiculo veiculo_do_motorista = repoVeiculos.recuperaPorPlaca(placa);
+                Veiculo veiculo_do_motorista = repoVeiculos.recuperarPorPlaca(placa);
 
                 Motorista motorista = new Motorista(cpf, nome, veiculo_do_motorista, enum_pagamento, pontuacaoMedia);
                 listaMotorista.add(motorista);
