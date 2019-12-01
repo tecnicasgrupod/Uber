@@ -22,6 +22,7 @@ public class Area { //PRONTA
         return pInfDir;
     }
 
+
     public SituacaoDaReta classifica(Reta reta) {
         if(cs.totalmenteDentro(reta.getP1(), reta.getP2(), pInfDir, pSupEsq)){
             return SituacaoDaReta.TODA_DENTRO;
@@ -38,4 +39,10 @@ public class Area { //PRONTA
     public String toString() {
         return "Area [pInfDir=" + pInfDir + ", pSupEsq=" + pSupEsq + "]";
     }
-} 
+
+    public Ponto pontoCentral() {
+        int x_central = pSupEsq.x + (pInfDir.x - pSupEsq.x)/2;
+        int y_central = pInfDir.y + (pSupEsq.y - pInfDir.y)/2;
+        return  new Ponto(x_central, y_central);
+    }
+}
