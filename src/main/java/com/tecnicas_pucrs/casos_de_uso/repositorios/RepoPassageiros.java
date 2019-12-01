@@ -1,16 +1,11 @@
 package com.tecnicas_pucrs.casos_de_uso.repositorios;
 
-import com.tecnicas_pucrs.entidades.Motorista;
 import com.tecnicas_pucrs.entidades.Passageiro;
-import com.tecnicas_pucrs.entidades.Veiculo;
 import com.tecnicas_pucrs.interfaces.repositorios.IRepoPassageiros;
-import com.tecnicas_pucrs.persistencia.PersistenciaMotoristas;
 import com.tecnicas_pucrs.persistencia.PersistenciaPassageiros;
-import com.tecnicas_pucrs.persistencia.PersistenciaVeiculos;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class RepoPassageiros implements IRepoPassageiros {
