@@ -4,13 +4,19 @@ import com.tecnicas_pucrs.entidades.*;
 import com.tecnicas_pucrs.entidades.geometria.Area;
 import com.tecnicas_pucrs.entidades.geometria.Ponto;
 import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
 
 import java.io.*;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PersistenciaBairros {
+
+    private static final String CSV_FILE_PATH = "bairros.dat";
 
     public static List<Bairro> carregaBairros() throws IOException {
 
@@ -34,5 +40,28 @@ public class PersistenciaBairros {
         }
 
         return listaBairros;
+    }
+
+    public static boolean persisteBairros(List<Bairro> lst) throws URISyntaxException, IOException {
+        try {
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get(CSV_FILE_PATH));
+            CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
+                    .withHeader("Nome", "x1", "x2", "y1", "y2", "Custo"));
+            for (Bairro b : lst) {
+                csvPrinter.printRecord(b.getNome(),
+                        b.getLimites().getPSupEsq().x,
+                        b.getLimites().getPInfDir().x,
+                        b.getLimites().getPSupEsq().y,
+                        b.getLimites().getPInfDir().y,
+                        b.getCustoBasico()
+                );
+            }
+            csvPrinter.flush();
+            csvPrinter.close();
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

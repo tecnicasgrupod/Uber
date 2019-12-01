@@ -7,10 +7,13 @@ import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoPassageiros;
 import com.tecnicas_pucrs.entidades.*;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
 
 import java.io.*;
 import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -18,6 +21,7 @@ import java.util.List;
 
 public class PersistenciaViagens {
 
+    private static final String CSV_FILE_PATH = "viagens.dat";
 
     public static List<Viagem> carregaViagens() throws FileNotFoundException, URISyntaxException, IOException {
 
@@ -51,5 +55,22 @@ public class PersistenciaViagens {
         }
 
         return listaViagens;
+    }
+
+    public static boolean persisteViagens(List<Viagem> lst) throws URISyntaxException, IOException {
+        try {
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get(CSV_FILE_PATH));
+            CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
+                    .withHeader("Id", "DataHora", "Roteiro", "Motorista", "Passageiro", "Custo"));
+            for (Viagem v : lst) {
+                csvPrinter.printRecord(v.getId(), v.getDataHora(), v.getRoteiro(), v.getMotorista().getCPF(), v.getPassageiro().getCPF(), v.getCusto());
+            }
+            csvPrinter.flush();
+            csvPrinter.close();
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }
