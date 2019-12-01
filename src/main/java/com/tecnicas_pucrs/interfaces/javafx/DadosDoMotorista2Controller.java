@@ -21,7 +21,9 @@ import javafx.stage.StageStyle;
 
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class DadosDoMotorista2Controller implements Initializable {
@@ -47,14 +49,21 @@ public class DadosDoMotorista2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        DadosDoMotoristaController dadosDoMotoristaAtual = new DadosDoMotoristaController();
-        System.out.println(dadosDoMotoristaAtual.retornaCPF());
-        this.nome.setText(dadosDoMotoristaAtual.retornaCPF());
+        DadosDoMotoristaController dadosDoMotoristaAtual = null;
+        try {
+            dadosDoMotoristaAtual = new DadosDoMotoristaController();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        this.nome.setText(dadosDoMotoristaAtual.retornaNome());
 
+        List<Integer> viagensDoMotoristaAtual = dadosDoMotoristaAtual.retornaViagens();
 
-        viagens.getItems().add("Viagem um");
-        viagens.getItems().add("Viagem dois");
-        viagens.getItems().add("Viagem três");
+        for (Integer i: viagensDoMotoristaAtual) {
+            viagens.getItems().add("Viagem "+i);
+        }
 
         btn_voltar.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {

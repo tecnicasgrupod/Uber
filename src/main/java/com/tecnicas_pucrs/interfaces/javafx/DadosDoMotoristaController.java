@@ -1,6 +1,13 @@
 package com.tecnicas_pucrs.interfaces.javafx;
 
 
+import com.tecnicas_pucrs.Fachada;
+import com.tecnicas_pucrs.casos_de_uso.politicas.CalculoCustoViagem;
+import com.tecnicas_pucrs.casos_de_uso.politicas.MotoristaEquivalente;
+import com.tecnicas_pucrs.casos_de_uso.politicas.PrecoIntegro;
+import com.tecnicas_pucrs.casos_de_uso.politicas.SeletorDeMotorista;
+import com.tecnicas_pucrs.casos_de_uso.repositorios.*;
+import com.tecnicas_pucrs.entidades.Motorista;
 import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -19,10 +26,15 @@ import javafx.stage.StageStyle;
 
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class DadosDoMotoristaController implements Initializable {
+
+    private Fachada fachada = new Fachada(new CalculoCustoViagem(new PrecoIntegro()), new SeletorDeMotorista(new MotoristaEquivalente()), new RepoBairros(), new RepoCidades(), new RepoMotoristas(), new RepoPassageiros(), new RepoViagens());
 
     @FXML
     private Button btn_buscar;
@@ -36,10 +48,14 @@ public class DadosDoMotoristaController implements Initializable {
     @FXML
     private TextField cpf_motorista;
 
-    static String cpf = "";
+    static String nomeDoMotoristaAtual = "";
+    static List<Integer> viagensDoMotoristaAtual = new ArrayList<>();
 
     private double x;
     private double y;
+
+    public DadosDoMotoristaController() throws IOException, URISyntaxException {
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -80,9 +96,12 @@ public class DadosDoMotoristaController implements Initializable {
 
         btn_buscar.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
-                ((Node) (event.getSource())).getScene().getWindow().hide();
                 try {
-                    cpf = cpf_motorista.getText();
+                    Motorista m = fachada.buscaMotoristaPorCPF(cpf_motorista.getText());
+                    nomeDoMotoristaAtual = m.getNome();
+                    viagensDoMotoristaAtual = fachada.recuperaViagensDoMotorista(cpf_motorista.getText());
+
+                    ((Node) (event.getSource())).getScene().getWindow().hide();
                     Parent root = FXMLLoader.load(getClass().getResource("/views/DadosDoMotorista2.fxml"));
                     root.setOnMousePressed(new EventHandler<MouseEvent>() {
                         public void handle(MouseEvent event) {
@@ -109,14 +128,18 @@ public class DadosDoMotoristaController implements Initializable {
 
                     stage.show();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    System.out.println("Motorista Inválido");
                 }
             }
         });
     }
 
-    public String retornaCPF(){
-        return cpf;
+    public String retornaNome(){
+        return nomeDoMotoristaAtual;
+    }
+
+    public List<Integer> retornaViagens(){
+        return viagensDoMotoristaAtual;
     }
 
     public void exit() {

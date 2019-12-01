@@ -2,11 +2,8 @@ package com.tecnicas_pucrs.casos_de_uso.repositorios;
 
 import com.tecnicas_pucrs.entidades.Passageiro;
 import com.tecnicas_pucrs.interfaces.repositorios.IRepoPassageiros;
-<<<<<<< HEAD
-=======
 import com.tecnicas_pucrs.persistencia.PersistenciaBairros;
 import com.tecnicas_pucrs.persistencia.PersistenciaMotoristas;
->>>>>>> 90d563dfb15859bcfdc17e8d762ba69b02869589
 import com.tecnicas_pucrs.persistencia.PersistenciaPassageiros;
 
 import java.io.IOException;
