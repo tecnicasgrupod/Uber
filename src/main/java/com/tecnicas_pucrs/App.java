@@ -23,5 +23,14 @@ public class App {
         System.out.println("CIDADES =>" + repoCidades.getCidades());
         System.out.println("VIAGENS =>" + repoViagens.getViagens());
 
+        repoVeiculos.persisteVeiculos();
+        repoMotoristas.persisteMotoristas();
+        repoPassageiros.persistePassageiros();
+        repoBairros.persisteBairros();
+        repoCidades.persisteCidades();
+        repoViagens.persisteViagens();
+
+
+
     }
 }

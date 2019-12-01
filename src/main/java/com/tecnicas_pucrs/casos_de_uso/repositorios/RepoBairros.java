@@ -19,6 +19,15 @@ public class RepoBairros implements IRepoBairros {
         return this.bairros;
     }
 
+    public boolean persisteBairros(){
+        try {
+            return PersistenciaBairros.persisteBairros(bairros);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public Bairro recuperarPorNome(String nome) {
         for (Bairro b : this.bairros) {
             if (b.getNome().equals(nome)) {

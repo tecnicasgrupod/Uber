@@ -29,7 +29,7 @@ public class PersistenciaCidades {
                 String nome = csvRecord.get("nome");
                 String bairros = csvRecord.get("bairros");
 
-                String[] Lbairros = bairros.replace("[", "").replace("]", "").split(";");
+                String[] Lbairros = bairros.split(";");
 
                 List<Bairro> listaDeBairro = new ArrayList<>();
                 RepoBairros repoBairros = new RepoBairros();
@@ -50,9 +50,14 @@ public class PersistenciaCidades {
         try {
             BufferedWriter writer = Files.newBufferedWriter(Paths.get(CSV_FILE_PATH));
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
-                    .withHeader("Nome", "Bairros"));
+                    .withHeader("nome", "bairros"));
+
             for (Cidade c : lst) {
-                csvPrinter.printRecord(c.getNome(), c.getListaDeBairros());
+                String bairros = "";
+                for (Bairro b: c.getListaDeBairros()) {
+                    bairros += b.getNome() + ";";
+                }
+                csvPrinter.printRecord(c.getNome(), bairros);
             }
             csvPrinter.flush();
             csvPrinter.close();

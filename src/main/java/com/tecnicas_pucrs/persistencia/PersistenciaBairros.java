@@ -46,12 +46,12 @@ public class PersistenciaBairros {
         try {
             BufferedWriter writer = Files.newBufferedWriter(Paths.get(CSV_FILE_PATH));
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
-                    .withHeader("Nome", "x1", "x2", "y1", "y2", "Custo"));
+                    .withHeader("nome", "x1", "y1", "x2", "y2", "custo"));
             for (Bairro b : lst) {
                 csvPrinter.printRecord(b.getNome(),
                         b.getLimites().getPSupEsq().x,
-                        b.getLimites().getPInfDir().x,
                         b.getLimites().getPSupEsq().y,
+                        b.getLimites().getPInfDir().x,
                         b.getLimites().getPInfDir().y,
                         b.getCustoBasico()
                 );

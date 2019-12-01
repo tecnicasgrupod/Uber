@@ -35,10 +35,15 @@ public class Roteiro {
 
     @Override
     public String toString() {
+        return bairroOrigem + ";" + bairroDestino ;
+    }
+
+    /*@Override
+    public String toString() {
         return "Roteiro{" +
                 "cidade=" + cidade +
                 ", bairroOrigem=" + bairroOrigem +
                 ", bairroDestino=" + bairroDestino +
                 '}';
-    }
+    }*/
 }

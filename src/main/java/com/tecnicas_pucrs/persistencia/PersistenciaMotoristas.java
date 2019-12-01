@@ -56,9 +56,9 @@ public class PersistenciaMotoristas {
         try {
             BufferedWriter writer = Files.newBufferedWriter(Paths.get(CSV_FILE_PATH));
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
-                    .withHeader("CPF", "Nome", "Veiculo", "Forma de Pagamento", "Pontuação Média"));
+                    .withHeader("cpf", "bome", "veiculo", "pagamento", "pontuacaoMedia"));
             for (Motorista m : lst) {
-                csvPrinter.printRecord(m.getCPF(), m.getNome(), m.getVeiculo(), m.getFormaPagamento(), m.getPontuacaoMedia());
+                csvPrinter.printRecord(m.getCPF(), m.getNome(), m.getVeiculo().getPlaca(), m.getFormaPagamento(), m.getPontuacaoMedia());
             }
             csvPrinter.flush();
             csvPrinter.close();

@@ -44,7 +44,7 @@ public class PersistenciaViagens {
                 Motorista motorista = repoMotoristas.recuperarPorCPF(csvRecord.get("motorista"));
                 Passageiro passageiro = repoPassegeiros.recuperarPorCPF(csvRecord.get("passageiro"));
                 double custo = Double.parseDouble(csvRecord.get("custo"));
-                String[] Lroteiros = roteiro.replace("[", "").replace("]", "").split(";");
+                String[] Lroteiros = roteiro.split(";");
 
                 Roteiro roteirow = new Roteiro(repoCidades.recuperarPorNome("canoas"), repoBairros.recuperarPorNome(Lroteiros[0]), repoBairros.recuperarPorNome(Lroteiros[1]));
 
@@ -61,9 +61,9 @@ public class PersistenciaViagens {
         try {
             BufferedWriter writer = Files.newBufferedWriter(Paths.get(CSV_FILE_PATH));
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
-                    .withHeader("Id", "DataHora", "Roteiro", "Motorista", "Passageiro", "Custo"));
+                    .withHeader("id", "dataHora", "roteiro", "motorista", "passageiro", "custo"));
             for (Viagem v : lst) {
-                csvPrinter.printRecord(v.getId(), v.getDataHora(), v.getRoteiro(), v.getMotorista().getCPF(), v.getPassageiro().getCPF(), v.getCusto());
+                csvPrinter.printRecord(v.getId(), v.getDataHora().toString().replace("T", " "), v.getRoteiro(), v.getMotorista().getCPF(), v.getPassageiro().getCPF(), v.getCusto());
             }
             csvPrinter.flush();
             csvPrinter.close();

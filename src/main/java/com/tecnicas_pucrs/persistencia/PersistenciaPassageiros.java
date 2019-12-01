@@ -33,7 +33,7 @@ public class PersistenciaPassageiros {
                 String nome = csvRecord.get("nome");
                 String cartao = csvRecord.get("nroCartao");
                 String pagamento = csvRecord.get("formaPagamento");
-                int pontuacaoMedia = Integer.parseInt(csvRecord.get("pontuacaoMedia"));
+                double pontuacaoMedia = Double.parseDouble(csvRecord.get("pontuacaoMedia"));
 
                 FormaPagamento enum_pagamento = FormaPagamento.CARTAO;
                 if (pagamento.equals("DINHEIRO")) enum_pagamento = FormaPagamento.DINHEIRO;
@@ -52,9 +52,9 @@ public class PersistenciaPassageiros {
         try {
             BufferedWriter writer = Files.newBufferedWriter(Paths.get(CSV_FILE_PATH));
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
-                    .withHeader("CPF", "Nome", "Veiculo", "Forma de Pagamento", "Pontuação Média"));
+                    .withHeader("nome","cpf","formaPagamento","nroCartao","pontuacaoMedia"));
             for (Passageiro m : lst) {
-                csvPrinter.printRecord(m.getCPF(), m.getNome(), m.getFormaPagamento(), m.getNroCartao(), m.getPontuacaoMedia());
+                csvPrinter.printRecord(m.getNome(),m.getCPF(), m.getFormaPagamento(), m.getNroCartao(), m.getPontuacaoMedia());
             }
             csvPrinter.flush();
             csvPrinter.close();

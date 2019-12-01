@@ -17,7 +17,7 @@ import java.util.List;
 
 public class PersistenciaVeiculos {
 
-    private static final String CSV_FILE_PATH = "/veiculos.dat";
+    private static final String CSV_FILE_PATH = "veiculos.dat";
     //static InputStream in = PersistenciaVeiculos.class.getResourceAsStream("/veiculos.dat");
 
     public static List<Veiculo> carregaVeiculos() throws FileNotFoundException, IOException, URISyntaxException {
@@ -36,9 +36,9 @@ public class PersistenciaVeiculos {
                 String categoria = csvRecord.get("categoria");
 
                 CategoriaVeiculo cat = CategoriaVeiculo.SIMPLES;
-                if (categoria.equals("SIMPLES")) cat = CategoriaVeiculo.SIMPLES;
-                if (categoria.equals("NORMAL")) cat = CategoriaVeiculo.NORMAL;
-                if (categoria.equals("LUXO")) cat = CategoriaVeiculo.LUXO;
+                if (categoria.toUpperCase().equals("SIMPLES")) cat = CategoriaVeiculo.SIMPLES;
+                if (categoria.toUpperCase().equals("NORMAL")) cat = CategoriaVeiculo.NORMAL;
+                if (categoria.toUpperCase().equals("LUXO")) cat = CategoriaVeiculo.LUXO;
 
                 Veiculo veiculo = VeiculosFactory.getVeiculo(placa, marca, cor, cat);
                 listVeiculos.add(veiculo);
@@ -54,7 +54,15 @@ public class PersistenciaVeiculos {
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
                     .withHeader("placa", "marca", "cor", "categoria"));
             for (Veiculo v : lst) {
-                csvPrinter.printRecord(v.getPlaca(), v.getMarca(), v.getCor(), v.getCat());
+                if (v.getCat().equals(CategoriaVeiculo.SIMPLES)) {
+                    csvPrinter.printRecord(v.getPlaca(), v.getMarca(), v.getCor(), "SIMPLES");
+                };
+                if (v.getCat().equals(CategoriaVeiculo.NORMAL)) {
+                    csvPrinter.printRecord(v.getPlaca(), v.getMarca(), v.getCor(), "NORMAL");
+                };
+                if (v.getCat().equals(CategoriaVeiculo.LUXO)) {
+                    csvPrinter.printRecord(v.getPlaca(), v.getMarca(), v.getCor(), "LUXO");
+                };
             }
             csvPrinter.flush();
             csvPrinter.close();

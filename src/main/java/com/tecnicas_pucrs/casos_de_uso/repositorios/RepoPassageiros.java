@@ -4,6 +4,7 @@ import com.tecnicas_pucrs.entidades.Motorista;
 import com.tecnicas_pucrs.entidades.Passageiro;
 import com.tecnicas_pucrs.entidades.Veiculo;
 import com.tecnicas_pucrs.interfaces.repositorios.IRepoPassageiros;
+import com.tecnicas_pucrs.persistencia.PersistenciaBairros;
 import com.tecnicas_pucrs.persistencia.PersistenciaMotoristas;
 import com.tecnicas_pucrs.persistencia.PersistenciaPassageiros;
 import com.tecnicas_pucrs.persistencia.PersistenciaVeiculos;
@@ -21,6 +22,15 @@ public class RepoPassageiros implements IRepoPassageiros {
         this.passageiros = PersistenciaPassageiros.carregaPassageiros();
     }
 
+    public boolean persistePassageiros(){
+        try {
+            return PersistenciaPassageiros.persistePassageiros(passageiros);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public List<Passageiro> getPassageiros() {
         return this.passageiros;
     }
@@ -34,7 +44,4 @@ public class RepoPassageiros implements IRepoPassageiros {
         throw new IllegalArgumentException("Passageiro Inexistente");
     }
 
-    public void atualizaPassageiro(Passageiro passageiro){
-        //TO DO
-    }
 }

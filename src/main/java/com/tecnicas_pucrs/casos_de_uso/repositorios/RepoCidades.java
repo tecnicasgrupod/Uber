@@ -2,6 +2,7 @@ package com.tecnicas_pucrs.casos_de_uso.repositorios;
 
 import com.tecnicas_pucrs.entidades.Cidade;
 import com.tecnicas_pucrs.interfaces.repositorios.IRepoCidades;
+import com.tecnicas_pucrs.persistencia.PersistenciaBairros;
 import com.tecnicas_pucrs.persistencia.PersistenciaCidades;
 
 import java.io.IOException;
@@ -18,6 +19,15 @@ public class RepoCidades implements IRepoCidades {
 
     public List<Cidade> getCidades() {
         return this.cidades;
+    }
+
+    public boolean persisteCidades(){
+        try {
+            return PersistenciaCidades.persisteCidades(cidades);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public Cidade recuperarPorNome(String nome) {

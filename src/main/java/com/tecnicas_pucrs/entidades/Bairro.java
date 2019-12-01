@@ -28,10 +28,16 @@ public class Bairro{
 
     @Override
     public String toString() {
+        return nome;
+    }
+
+    /*
+    @Override
+    public String toString() {
         return "Bairro{" +
                 "nome='" + nome + '\'' +
                 ", limites=" + limites +
                 ", custoBasico=" + custoBasico +
                 '}';
-    }
+    }*/
 }
