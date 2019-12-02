@@ -33,7 +33,7 @@ import java.util.ResourceBundle;
 
 public class DadosDoMotoristaController implements Initializable {
 
-    private Fachada fachada = new Fachada(new CalculoCustoViagem(new PrecoIntegro()), new SeletorDeMotorista(new MotoristaEquivalente()), new RepoBairros(), new RepoCidades(), new RepoMotoristas(), new RepoPassageiros(), new RepoViagens());
+    private Fachada fachada = new Fachada(new CalculoCustoViagem(new PrecoIntegro()), new SeletorDeMotorista(new MotoristaEquivalente()), RepoBairros.getInstance(), RepoCidades.getInstance(), RepoMotoristas.getInstance(), RepoPassageiros.getInstance(), RepoViagens.getInstance());
 
     @FXML
     private Button btn_buscar;

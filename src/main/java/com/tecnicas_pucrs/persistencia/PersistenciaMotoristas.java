@@ -23,7 +23,7 @@ public class PersistenciaMotoristas {
     public static List<Motorista> carregaMotoristas() throws URISyntaxException, IOException {
 
         List<Motorista> listaMotorista = new ArrayList<>();
-        RepoVeiculos repoVeiculos = new RepoVeiculos();
+        RepoVeiculos repoVeiculos = RepoVeiculos.getInstance();
 
         try (
                 Reader reader = new BufferedReader(new InputStreamReader(PersistenciaVeiculos.class.getResourceAsStream("/motoristas.dat")));

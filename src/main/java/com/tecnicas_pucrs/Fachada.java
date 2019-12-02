@@ -21,14 +21,14 @@ public class Fachada {
     private RepoPassageiros passageiros;
     private RepoViagens viagens;
 
-    public Fachada(CalculoCustoViagem custoViagem, SeletorDeMotorista selecaoMotorista) {
+    public Fachada(CalculoCustoViagem custoViagem, SeletorDeMotorista selecaoMotorista, RepoBairros bairros, RepoCidades cidades, RepoMotoristas motoristas, RepoPassageiros passageiros, RepoViagens viagens) {
         this.custoViagem = custoViagem;
         this.selecaoMotorista = selecaoMotorista;
-        this.bairros = RepoBairros.getInstance();
-        this.cidades = RepoCidades.getInstance();
-        this.motoristas = RepoMotoristas.getInstance();
-        this.passageiros = RepoPassageiros.getInstance();
-        this.viagens = RepoViagens.getInstance();
+        this.bairros = bairros;
+        this.cidades = cidades;
+        this.motoristas = motoristas;
+        this.passageiros = passageiros;
+        this.viagens = viagens;
     }
 
     public HashMap<String, String> buscaMotoristaPorCPF(String cpf){
