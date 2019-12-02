@@ -9,10 +9,22 @@ import java.util.List;
 
 public class RepoBairros implements IRepoBairros {
 
+    private static RepoBairros repoBairros;
     private List<Bairro> bairros;
 
-    public RepoBairros() throws IOException {
+    private RepoBairros() throws IOException {
         this.bairros = PersistenciaBairros.carregaBairros();
+    }
+
+    public static synchronized RepoBairros getInstance(){
+        if (repoBairros == null){
+            try {
+                repoBairros = new RepoBairros();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return repoBairros;
     }
 
     public List<Bairro> getBairros() {

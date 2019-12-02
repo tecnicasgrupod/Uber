@@ -10,10 +10,22 @@ import java.util.List;
 
 public class RepoPassageiros implements IRepoPassageiros {
 
+    private static RepoPassageiros repoPassageiros;
     private List<Passageiro> passageiros;
 
-    public RepoPassageiros() throws IOException, URISyntaxException {
+    private RepoPassageiros() throws IOException, URISyntaxException {
         this.passageiros = PersistenciaPassageiros.carregaPassageiros();
+    }
+
+    public static synchronized RepoPassageiros getInstance(){
+        if (repoPassageiros == null){
+            try {
+                repoPassageiros = new RepoPassageiros();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return repoPassageiros;
     }
 
     public boolean persistePassageiros(){

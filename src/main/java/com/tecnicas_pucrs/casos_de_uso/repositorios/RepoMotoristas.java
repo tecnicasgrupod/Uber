@@ -11,10 +11,22 @@ import java.util.List;
 
 public class RepoMotoristas implements IRepoMotoristas {
 
+    private static  RepoMotoristas repoMotoristas;
     private List<Motorista> motoristas;
 
-    public RepoMotoristas() throws IOException, URISyntaxException {
+    private RepoMotoristas() throws IOException, URISyntaxException {
         this.motoristas = PersistenciaMotoristas.carregaMotoristas();
+    }
+
+    public static synchronized RepoMotoristas getInstance(){
+        if (repoMotoristas == null){
+            try {
+                repoMotoristas = new RepoMotoristas();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return repoMotoristas;
     }
 
     public boolean persisteMotoristas(){

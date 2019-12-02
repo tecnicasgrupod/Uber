@@ -1,34 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b67ec47f-df1f-4304-bc4b-b6abc508730d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bairros.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cidades.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/motoistas.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passageiros.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/AvaliacaoPassageiroController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/ic_avaliacao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/ic_calendario.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/undraw_feedback_h2ft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/undraw_mail1_uab6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/undraw_map_1r69.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/AvaliacaoPassageiro.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/veiculos.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viagens.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="d455db70-d965-4cb5-a450-92d0b845abaa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uber.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Uber.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/CalculoCustoViagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/CalculoCustoViagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoBairros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoBairros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoCidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoCidades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoMotoristas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoMotoristas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoPassageiros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoPassageiros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Roteiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Roteiro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDoMotorista2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDoMotorista2Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDoMotoristaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDoMotoristaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/ldogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/DadosDoMotorista2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/DadosDoMotorista2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/Fachada.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/Fachada.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Roteiro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Roteiro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoVeiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoViagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoViagens.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoLuxo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoLuxo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoNormal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoNormal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoSimples.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoSimples.class" afterDir="false" />
@@ -64,8 +47,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
         <option value="Class" />
       </list>
     </option>
@@ -101,6 +84,9 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
@@ -208,6 +194,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="75" key="#Project_Structure" timestamp="1575286990449">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="75" key="#Project_Structure/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575286990449" />
     <state x="532" y="235" width="526" height="383" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575151629538">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -222,30 +212,42 @@
     </state>
     <state x="622" y="311" width="299" height="205" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575198445224" />
     <state x="648" y="321" width="303" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1600.860@0.0.1600.860" timestamp="1575144701781" />
+    <state x="423" y="342" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1575286963576">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="423" y="342" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575286963576" />
+    <state x="566" y="297" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1575286974394">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="566" y="297" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575286974394" />
     <state x="583" y="187" width="424" height="479" key="FileChooserDialogImpl" timestamp="1575155213223">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="583" y="187" width="424" height="479" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1575155213223" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1575236306754">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1575287640887">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575236306754" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575287640887" />
     <state width="1558" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1575236306754">
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1575287640887">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575236306754" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575287640887" />
     <state width="1558" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1575236306754">
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1575287640887">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575236306754" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575287640887" />
     <state width="1558" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1575236306754">
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1575287640887">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575236306754" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575287640887" />
     <state width="1558" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
+    <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1575287107566">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="299" y="72" key="Maven.ArtifactSearchDialog/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575287107566" />
     <state x="277" y="59" key="SettingsEditor" timestamp="1575209665670">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -258,5 +260,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="511" y="37" key="refactoring.ChangeSignatureDialog/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575208139127" />
+    <state x="425" y="71" width="672" height="676" key="search.everywhere.popup" timestamp="1575288218640">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="425" y="71" width="672" height="676" key="search.everywhere.popup/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575288218640" />
   </component>
 </project>

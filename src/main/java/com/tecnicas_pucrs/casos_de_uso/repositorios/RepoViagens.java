@@ -13,10 +13,22 @@ import java.util.List;
 
 public class RepoViagens {
 
+    private static  RepoViagens repoViagens;
     private List<Viagem> viagens;
 
-    public RepoViagens() throws IOException, URISyntaxException {
+    private RepoViagens() throws IOException, URISyntaxException {
         this.viagens = PersistenciaViagens.carregaViagens();
+    }
+
+    public static synchronized RepoViagens getInstance(){
+        if (repoViagens == null){
+            try {
+                repoViagens = new RepoViagens();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return repoViagens;
     }
 
     public boolean persisteViagens(){

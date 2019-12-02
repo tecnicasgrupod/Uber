@@ -11,10 +11,22 @@ import java.util.List;
 
 public class RepoCidades implements IRepoCidades {
 
+    private static RepoCidades repoCidades;
     private List<Cidade> cidades;
 
-    public RepoCidades() throws IOException, URISyntaxException {
+    private RepoCidades() throws IOException, URISyntaxException {
         this.cidades = PersistenciaCidades.carregaCidades();
+    }
+
+    public static synchronized RepoCidades getInstance(){
+        if (repoCidades == null){
+            try {
+                repoCidades = new RepoCidades();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return repoCidades;
     }
 
     public List<Cidade> getCidades() {
