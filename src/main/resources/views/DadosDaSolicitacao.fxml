@@ -47,11 +47,11 @@
             </ImageView>
             <Pane layoutX="394.0" layoutY="45.0" prefHeight="373.0" prefWidth="346.0" style="-fx-background-color: #000;">
                <children>
-                  <TextField fx:id="cpf_passageiro" layoutX="92.0" layoutY="39.0" prefHeight="43.0" prefWidth="197.0" promptText="CPF do Passageiro" />
-                  <TextField fx:id="bairro_origem" layoutX="92.0" layoutY="99.0" prefHeight="43.0" prefWidth="197.0" promptText="Bairro Origem" />
-                  <TextField fx:id="bairro_destino" layoutX="92.0" layoutY="159.0" prefHeight="43.0" prefWidth="197.0" promptText="Bairro Destino" />
-                  <ChoiceBox fx:id="pagamento" layoutX="92.0" layoutY="219.0" prefHeight="43.0" prefWidth="197.0" style="-fx-background-color: #fff;" />
-                  <ChoiceBox fx:id="categoria" layoutX="93.0" layoutY="279.0" prefHeight="43.0" prefWidth="197.0" style="-fx-background-color: #fff;" />
+                  <TextField fx:id="cpf_passageiro" layoutX="92.0" layoutY="39.0" prefHeight="43.0" prefWidth="197.0" promptText="CPF do Passageiro" stylesheets="@../style/style.css" />
+                  <TextField fx:id="bairro_origem" layoutX="92.0" layoutY="99.0" prefHeight="43.0" prefWidth="197.0" promptText="Bairro Origem" stylesheets="@../style/style.css" />
+                  <TextField fx:id="bairro_destino" layoutX="92.0" layoutY="159.0" prefHeight="43.0" prefWidth="197.0" promptText="Bairro Destino" stylesheets="@../style/style.css" />
+                  <ChoiceBox fx:id="pagamento" layoutX="92.0" layoutY="219.0" prefHeight="43.0" prefWidth="197.0" style="-fx-background-color: #fff;" stylesheets="@../style/style.css" />
+                  <ChoiceBox fx:id="categoria" layoutX="93.0" layoutY="279.0" prefHeight="43.0" prefWidth="197.0" style="-fx-background-color: #fff;" stylesheets="@../style/style.css" />
                   <ImageView fitHeight="43.0" fitWidth="44.0" layoutX="28.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/ic_veiculo.png" />
