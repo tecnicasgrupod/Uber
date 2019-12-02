@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 public class Roteiro {
 
     private Cidade cidade;
-    private  Bairro bairroOrigem;
-    private  Bairro bairroDestino;
+    private Bairro bairroOrigem;
+    private Bairro bairroDestino;
 
     public Roteiro(Cidade cidade, Bairro bairroOrigem, Bairro bairroDestino) {
         this.cidade = cidade;
