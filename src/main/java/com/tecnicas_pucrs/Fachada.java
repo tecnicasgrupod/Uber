@@ -6,7 +6,9 @@ import com.tecnicas_pucrs.casos_de_uso.repositorios.*;
 import com.tecnicas_pucrs.entidades.*;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Fachada {
@@ -19,8 +21,55 @@ public class Fachada {
     private RepoPassageiros passageiros;
     private RepoViagens viagens;
 
-    public Fachada(CalculoCustoViagem custoViagem, SeletorDeMotorista selecaoMotorista, RepoCidades cidades, RepoBairros bairros, RepoMotoristas motoristas) {
+    public Fachada(CalculoCustoViagem custoViagem, SeletorDeMotorista selecaoMotorista, RepoBairros bairros, RepoCidades cidades, RepoMotoristas motoristas, RepoPassageiros passageiros, RepoViagens viagens) {
+        this.custoViagem = custoViagem;
+        this.selecaoMotorista = selecaoMotorista;
+        this.bairros = bairros;
+        this.cidades = cidades;
+        this.motoristas = motoristas;
+        this.passageiros = passageiros;
+        this.viagens = viagens;
     }
+
+    public HashMap<String, String> buscaMotoristaPorCPF(String cpf){
+        Motorista motoristaAtual = motoristas.recuperarPorCPF(cpf);
+        HashMap<String, String> motoristaRequest = new HashMap<>();
+        motoristaRequest.put("cpfMotorista", motoristaAtual.getCPF());
+        motoristaRequest.put("nome", motoristaAtual.getNome());
+        return motoristaRequest;
+    }
+
+    public HashMap<String, String> buscaViagemPorId(int id){
+        Viagem viagemAtual = viagens.recuperaPorId(id);
+        HashMap<String, String> viagemRequest = new HashMap<>();
+        viagemRequest.put("cpfPassageiro", viagemAtual.getPassageiro().getCPF());
+        viagemRequest.put("data", DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").format(viagemAtual.getDataHora()));
+        viagemRequest.put("bairroOrigem", viagemAtual.getRoteiro().getBairroOrigem().getNome());
+        viagemRequest.put("bairroDestino", viagemAtual.getRoteiro().getBairroDestino().getNome());
+        viagemRequest.put("custo", Double.toString(viagemAtual.getCusto()));
+        return viagemRequest;
+    }
+
+    public List<Integer> recuperaViagensDoMotorista(String cpfMotorista) {
+        List<Integer> viagensDoMotorista = new ArrayList<>();
+
+        Motorista motorista = motoristas.recuperarPorCPF(cpfMotorista);
+        List<Viagem> todasViagens = viagens.getViagens();
+
+        for (Viagem v : todasViagens) {
+            if (v.getMotorista().getCPF().equals(motorista.getCPF())) {
+                viagensDoMotorista.add(v.getId());
+            }
+        }
+
+        return viagensDoMotorista;
+    }
+
+    public void avaliaPassageiro(String cpfPassageiro, String nota) {
+        Passageiro passageiro = passageiros.recuperarPorCPF(cpfPassageiro);
+        passageiro.informaPontuacao(Integer.parseInt(nota));
+    }
+
 /**
     public Viagem solicitaVeiculoParaViagem(String cpf, String cidade, String bairroOrigem, String bairroDestino, String formaPagamento, String catVeiculo) {
         Passageiro passageiro = passageiros.recuperarPorCPF(cpf);
@@ -36,20 +85,7 @@ public class Fachada {
         return viagem;
     }
 
-    public List<Viagem> recuperaViagensDoMotorista(String cpfMotorista) {
-        List<Viagem> viagensDoMotorista = new ArrayList<>();
 
-        Motorista motorista = motoristas.recuperarPorCPF(cpfMotorista);
-        List<Viagem> todasViagens = viagens.getViagens();
-
-        for (Viagem v : todasViagens) {
-            if (v.getMotorista() == motorista) {
-                viagensDoMotorista.add(v);
-            }
-        }
-
-        return viagensDoMotorista;
-    }
 
     public boolean informaPontuacaoMotorista(String cpfMotorista) {
         return false;

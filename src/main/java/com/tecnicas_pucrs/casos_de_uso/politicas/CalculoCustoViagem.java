@@ -8,21 +8,17 @@ import com.tecnicas_pucrs.entidades.Roteiro;
 public class CalculoCustoViagem{
 
     private PoliticasDeCusto politica;
-    private Roteiro roteiro;
-    private CategoriaVeiculo categoriaVeiculo;
 
 
-    public CalculoCustoViagem(PoliticasDeCusto politica, Roteiro roteiro, CategoriaVeiculo categoriaVeiculo) {
+    public CalculoCustoViagem(PoliticasDeCusto politica) {
         this.politica = politica;
-        this.roteiro = roteiro;
-        this.categoriaVeiculo = categoriaVeiculo;
     }
 
     public void setPolitica(PoliticasDeCusto politica) {
         this.politica = politica;
     }
 
-    public double getCusto(){
+    public double getCusto(Roteiro roteiro, CategoriaVeiculo categoriaVeiculo){
         double custo_base = 0;
         for (Bairro b : roteiro.bairrosPercorridos()) {
             custo_base += b.getCustoBasico();
