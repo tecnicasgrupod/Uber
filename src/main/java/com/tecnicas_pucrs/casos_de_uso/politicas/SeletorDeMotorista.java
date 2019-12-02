@@ -17,7 +17,7 @@ public class SeletorDeMotorista{
         this.politica = politica;
     }
 
-    public Motorista getMotorista(CategoriaVeiculo categoriaVeiculo, double pontuacaoPassageiro, RepoMotoristas repoMotoristas){
+    public Motorista selecionaMotoristaParaViagem(CategoriaVeiculo categoriaVeiculo, double pontuacaoPassageiro, RepoMotoristas repoMotoristas){
 
         return politica.selecionaMotorista(categoriaVeiculo, pontuacaoPassageiro, repoMotoristas);
     }

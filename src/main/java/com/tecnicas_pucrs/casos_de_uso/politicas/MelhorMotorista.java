@@ -8,7 +8,7 @@ public class MelhorMotorista implements PoliticasDeSelecao {
 
     public Motorista selecionaMotorista(CategoriaVeiculo categoriaVeiculo, double pontuacaoPassageiro, RepoMotoristas repoMotoristas){
         try{
-            Motorista motorista_selecionado = repoMotoristas.getMotoristas().get(0);
+            Motorista motorista_selecionado = repoMotoristas.getMotoristas().get(0); //considerar o pagameto
             for (Motorista m : repoMotoristas.getMotoristas()){
                 if(motorista_selecionado.getPontuacaoMedia() < m.getPontuacaoMedia()){
                     motorista_selecionado = m;

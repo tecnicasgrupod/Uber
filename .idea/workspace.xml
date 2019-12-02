@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d455db70-d965-4cb5-a450-92d0b845abaa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/AvaliacaoPassageiroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/AvaliacaoPassageiroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDoMotoristaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDoMotoristaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/MelhorMotorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/MelhorMotorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/SeletorDeMotorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/SeletorDeMotorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoViagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoViagens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Motorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Motorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaSolicitacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaSolicitacaoController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +161,7 @@
       <workItem from="1573132096483" duration="1845000" />
       <workItem from="1575144589736" duration="15204000" />
       <workItem from="1575198312254" duration="11509000" />
-      <workItem from="1575299909693" duration="230000" />
+      <workItem from="1575299909693" duration="5298000" />
     </task>
     <servers />
   </component>
@@ -188,12 +190,12 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="532" y="235" width="526" height="383" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1575151629538" />
-    <state x="561" y="135" width="488" height="587" key="#com.intellij.ide.util.MemberChooser" timestamp="1575299956932">
+    <state x="561" y="135" width="374" height="599" key="#com.intellij.ide.util.MemberChooser" timestamp="1575303371161">
       <screen x="67" y="25" width="1299" height="713" />
     </state>
     <state x="584" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575202546656" />
     <state x="608" y="133" width="488" height="587" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1575161489412" />
-    <state x="561" y="135" key="#com.intellij.ide.util.MemberChooser/67.25.1299.713@67.25.1299.713" timestamp="1575299956932" />
+    <state x="561" y="135" width="374" height="599" key="#com.intellij.ide.util.MemberChooser/67.25.1299.713@67.25.1299.713" timestamp="1575303371161" />
     <state x="622" y="311" width="299" height="205" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575198445224">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -211,30 +213,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="583" y="187" width="424" height="479" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1575155213223" />
-    <state width="628" height="165" key="GridCell.Tab.0.bottom" timestamp="1575300328093">
+    <state width="1257" height="165" key="GridCell.Tab.0.bottom" timestamp="1575306214538">
       <screen x="67" y="25" width="1299" height="713" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575287640887" />
     <state width="1558" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="628" height="165" key="GridCell.Tab.0.bottom/67.25.1299.713@67.25.1299.713" timestamp="1575300328093" />
-    <state width="628" height="165" key="GridCell.Tab.0.center" timestamp="1575300328090">
+    <state width="1257" height="165" key="GridCell.Tab.0.bottom/67.25.1299.713@67.25.1299.713" timestamp="1575306214538" />
+    <state width="1257" height="165" key="GridCell.Tab.0.center" timestamp="1575306214538">
       <screen x="67" y="25" width="1299" height="713" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575287640887" />
     <state width="1558" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="628" height="165" key="GridCell.Tab.0.center/67.25.1299.713@67.25.1299.713" timestamp="1575300328090" />
-    <state width="628" height="165" key="GridCell.Tab.0.left" timestamp="1575300328089">
+    <state width="1257" height="165" key="GridCell.Tab.0.center/67.25.1299.713@67.25.1299.713" timestamp="1575306214538" />
+    <state width="1257" height="165" key="GridCell.Tab.0.left" timestamp="1575306214537">
       <screen x="67" y="25" width="1299" height="713" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575287640887" />
     <state width="1558" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="628" height="165" key="GridCell.Tab.0.left/67.25.1299.713@67.25.1299.713" timestamp="1575300328089" />
-    <state width="628" height="165" key="GridCell.Tab.0.right" timestamp="1575300328092">
+    <state width="1257" height="165" key="GridCell.Tab.0.left/67.25.1299.713@67.25.1299.713" timestamp="1575306214537" />
+    <state width="1257" height="165" key="GridCell.Tab.0.right" timestamp="1575306214538">
       <screen x="67" y="25" width="1299" height="713" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575287640887" />
     <state width="1558" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="628" height="165" key="GridCell.Tab.0.right/67.25.1299.713@67.25.1299.713" timestamp="1575300328092" />
+    <state width="1257" height="165" key="GridCell.Tab.0.right/67.25.1299.713@67.25.1299.713" timestamp="1575306214538" />
     <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1575287107566">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
