@@ -2,8 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d455db70-d965-4cb5-a450-92d0b845abaa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/AvaliacaoMotoristaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaViagemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/ic_placa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/icons8-motorista.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/AvaliacaoMotorista.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/DadosDaViagem.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uber.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Uber.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/MelhorMotorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/MelhorMotorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/MotoristaEquivalente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/MotoristaEquivalente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/PoliticasDeSelecao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/PoliticasDeSelecao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/SeletorDeMotorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/SeletorDeMotorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoViagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoViagens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Motorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Motorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/AvaliacaoPassageiroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/AvaliacaoPassageiroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaSolicitacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaSolicitacaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDoMotoristaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDoMotoristaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaCidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaCidades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaMotoristas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaMotoristas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaViagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaViagens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/Fachada.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/Fachada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Motorista.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Motorista.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Roteiro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/Roteiro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoLuxo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoLuxo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoNormal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoNormal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoSimples.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/entidades/VeiculoSimples.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaCidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaCidades.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaMotoristas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaMotoristas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaViagens.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaViagens.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,10 +214,11 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="532" y="235" width="526" height="383" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1575151629538" />
-    <state x="584" y="129" width="488" height="587" key="#com.intellij.ide.util.MemberChooser" timestamp="1575202546656">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="2559" y="158" width="488" height="587" key="#com.intellij.ide.util.MemberChooser" timestamp="1575309984933">
+      <screen x="1920" y="0" width="1680" height="1020" />
     </state>
-    <state x="584" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575202546656" />
+    <state x="584" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575309587193" />
+    <state x="2559" y="158" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834/1920.0.1680.1020@1920.0.1680.1020" timestamp="1575309984933" />
     <state x="608" y="133" width="488" height="587" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1575161489412" />
     <state x="622" y="311" width="299" height="205" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575198445224">
       <screen x="0" y="0" width="1536" height="834" />

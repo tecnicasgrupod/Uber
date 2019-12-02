@@ -61,13 +61,17 @@ public class App extends Application {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
 
-        RepoVeiculos repoVeiculos = new RepoVeiculos();
-        RepoMotoristas repoMotoristas = new RepoMotoristas();
-        RepoPassageiros repoPassageiros = new RepoPassageiros();
-        RepoBairros repoBairros = new RepoBairros();
-        RepoCidades repoCidades = new RepoCidades();
-        RepoViagens repoViagens = new RepoViagens();
+        RepoVeiculos repoVeiculos = RepoVeiculos.getInstance();
+        RepoMotoristas repoMotoristas = RepoMotoristas.getInstance();
+        RepoPassageiros repoPassageiros = RepoPassageiros.getInstance();
+        RepoBairros repoBairros = RepoBairros.getInstance();
+        RepoCidades repoCidades = RepoCidades.getInstance();
+        RepoViagens repoViagens = RepoViagens.getInstance();
 
+        launch(args);
+
+        /**
+         *
         System.out.println("VEICULOS =>" + repoVeiculos.getVeiculos());
         System.out.println("MOTORISTAS =>" + repoMotoristas.getMotoristas());
         System.out.println("PASSAGEIROS =>" + repoPassageiros.getPassageiros());
@@ -75,14 +79,14 @@ public class App extends Application {
         System.out.println("CIDADES =>" + repoCidades.getCidades());
         System.out.println("VIAGENS =>" + repoViagens.getViagens());
 
-        launch(args);
-
         repoVeiculos.persisteVeiculos();
         repoMotoristas.persisteMotoristas();
         repoPassageiros.persistePassageiros();
         repoBairros.persisteBairros();
         repoCidades.persisteCidades();
         repoViagens.persisteViagens();
+
+         **/
 
     }
 }

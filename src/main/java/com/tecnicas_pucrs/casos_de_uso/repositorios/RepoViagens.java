@@ -40,6 +40,10 @@ public class RepoViagens {
         return false;
     }
 
+    public void adicionaViagem(Viagem v){
+        viagens.add(v);
+    }
+
     public List<Viagem> getViagens() {
         return this.viagens;
     }

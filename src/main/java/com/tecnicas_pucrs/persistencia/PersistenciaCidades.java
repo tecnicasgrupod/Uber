@@ -32,7 +32,7 @@ public class PersistenciaCidades {
                 String[] Lbairros = bairros.split(";");
 
                 List<Bairro> listaDeBairro = new ArrayList<>();
-                RepoBairros repoBairros = new RepoBairros();
+                RepoBairros repoBairros = RepoBairros.getInstance();
 
                 for (String b : Lbairros) {
                     listaDeBairro.add(repoBairros.recuperarPorNome(b));

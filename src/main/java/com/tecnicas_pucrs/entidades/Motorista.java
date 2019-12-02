@@ -35,13 +35,18 @@ public class Motorista{
     public FormaPagamento getFormaPagamento(){
         return pagamento;
     }
-    
-    public int getSomatorioDeAvaliacoes(){
-        return somatorioDeAvaliacoes;
+
+    public int getQuantidadeDeAvaliacoes() {
+        return quantidadeDeAvaliacoes;
     }
 
-    public void incrementaQuantidadeDeAvalicoes(){
-        this.quantidadeDeAvaliacoes++;
+    public void informaPontuacao(int pontuacao){
+        quantidadeDeAvaliacoes++;
+        setPontuacaoMedia(getPontuacaoMedia() + (pontuacao / getQuantidadeDeAvaliacoes()));
+    }
+
+    public void setPontuacaoMedia(int pontuacaoMedia) {
+        this.pontuacaoMedia = pontuacaoMedia;
     }
 
     public int getPontuacaoMedia() {

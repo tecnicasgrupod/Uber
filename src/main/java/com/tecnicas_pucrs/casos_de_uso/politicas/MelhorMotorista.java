@@ -2,21 +2,25 @@ package com.tecnicas_pucrs.casos_de_uso.politicas;
 
 import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoMotoristas;
 import com.tecnicas_pucrs.entidades.CategoriaVeiculo;
+import com.tecnicas_pucrs.entidades.FormaPagamento;
 import com.tecnicas_pucrs.entidades.Motorista;
+
+import java.util.List;
 
 public class MelhorMotorista implements PoliticasDeSelecao {
 
-    public Motorista selecionaMotorista(CategoriaVeiculo categoriaVeiculo, double pontuacaoPassageiro, RepoMotoristas repoMotoristas){
+    public Motorista selecionaMotorista(CategoriaVeiculo categoriaVeiculo, double pontuacaoPassageiro, RepoMotoristas repoMotoristas, FormaPagamento formaPagamento) {
         try{
-            Motorista motorista_selecionado = repoMotoristas.getMotoristas().get(0);
-            for (Motorista m : repoMotoristas.getMotoristas()){
+            List<Motorista> listaParcial = repoMotoristas.getMotoristas();
+            listaParcial.removeIf(m -> !m.getFormaPagamento().equals(formaPagamento));
+            Motorista motorista_selecionado = listaParcial.get(0);
+            for (Motorista m : listaParcial){
                 if(motorista_selecionado.getPontuacaoMedia() < m.getPontuacaoMedia()){
                     motorista_selecionado = m;
                 }
             }
             return motorista_selecionado;
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;

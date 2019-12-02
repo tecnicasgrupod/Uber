@@ -32,10 +32,10 @@ public class PersistenciaViagens {
                 CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
         ) {
             Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(reader);
-            RepoBairros repoBairros = new RepoBairros();
-            RepoCidades repoCidades = new RepoCidades();
-            RepoMotoristas repoMotoristas = new RepoMotoristas();
-            RepoPassageiros repoPassegeiros = new RepoPassageiros();
+            RepoBairros repoBairros = RepoBairros.getInstance();
+            RepoCidades repoCidades = RepoCidades.getInstance();
+            RepoMotoristas repoMotoristas = RepoMotoristas.getInstance();
+            RepoPassageiros repoPassegeiros = RepoPassageiros.getInstance();
 
             for (CSVRecord csvRecord : records) {
                 int id = Integer.parseInt(csvRecord.get("id"));

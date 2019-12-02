@@ -21,14 +21,14 @@ public class Fachada {
     private RepoPassageiros passageiros;
     private RepoViagens viagens;
 
-    public Fachada(CalculoCustoViagem custoViagem, SeletorDeMotorista selecaoMotorista) {
+    public Fachada(CalculoCustoViagem custoViagem, SeletorDeMotorista selecaoMotorista, RepoBairros bairros, RepoCidades cidades, RepoMotoristas motoristas, RepoPassageiros passageiros, RepoViagens viagens) {
         this.custoViagem = custoViagem;
         this.selecaoMotorista = selecaoMotorista;
-        this.bairros = RepoBairros.getInstance();
-        this.cidades = RepoCidades.getInstance();
-        this.motoristas = RepoMotoristas.getInstance();
-        this.passageiros = RepoPassageiros.getInstance();
-        this.viagens = RepoViagens.getInstance();
+        this.bairros = bairros;
+        this.cidades = cidades;
+        this.motoristas = motoristas;
+        this.passageiros = passageiros;
+        this.viagens = viagens;
     }
 
     public HashMap<String, String> buscaMotoristaPorCPF(String cpf){
@@ -36,13 +36,19 @@ public class Fachada {
         HashMap<String, String> motoristaRequest = new HashMap<>();
         motoristaRequest.put("cpfMotorista", motoristaAtual.getCPF());
         motoristaRequest.put("nome", motoristaAtual.getNome());
+        System.out.println("VEICULO " + motoristaAtual.getVeiculo().getMarca());
+        motoristaRequest.put("modelo", motoristaAtual.getVeiculo().getMarca());
+        motoristaRequest.put("placa", motoristaAtual.getVeiculo().getPlaca());
         return motoristaRequest;
     }
 
     public HashMap<String, String> buscaViagemPorId(int id){
         Viagem viagemAtual = viagens.recuperaPorId(id);
+        System.out.println("V_ATUAL "+viagemAtual);
         HashMap<String, String> viagemRequest = new HashMap<>();
         viagemRequest.put("cpfPassageiro", viagemAtual.getPassageiro().getCPF());
+        viagemRequest.put("cpfMotorista", viagemAtual.getMotorista().getCPF());
+        System.out.println(viagemAtual.getMotorista().getCPF());
         viagemRequest.put("data", DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").format(viagemAtual.getDataHora()));
         viagemRequest.put("bairroOrigem", viagemAtual.getRoteiro().getBairroOrigem().getNome());
         viagemRequest.put("bairroDestino", viagemAtual.getRoteiro().getBairroDestino().getNome());
@@ -70,29 +76,41 @@ public class Fachada {
         passageiro.informaPontuacao(Integer.parseInt(nota));
     }
 
-/**
-    public Viagem solicitaVeiculoParaViagem(String cpf, String cidade, String bairroOrigem, String bairroDestino, String formaPagamento, String catVeiculo) {
+    public void avaliaMotorista(String cpfMotorista, String nota) {
+        Motorista motorista = motoristas.recuperarPorCPF(cpfMotorista);
+        motorista.informaPontuacao(Integer.parseInt(nota));
+    }
+
+    public int solicitaVeiculoParaViagem(String cpf, String cidade, String bairroOrigem, String bairroDestino, String formaPagamento, String catVeiculo) {
+        System.out.println(cpf);
+        System.out.println(cidade);
+        System.out.println(bairroOrigem);
+        System.out.println(bairroDestino);
+        System.out.println(formaPagamento);
+        System.out.println(catVeiculo);
+
         Passageiro passageiro = passageiros.recuperarPorCPF(cpf);
         Cidade cidadeD = cidades.recuperarPorNome(cidade);
         Bairro origem = bairros.recuperarPorNome(bairroOrigem);
         Bairro destino = bairros.recuperarPorNome(bairroDestino);
         Roteiro roteiro = new Roteiro(cidadeD, origem, destino);
-        Motorista motorista = selecaoMotorista.selecionaMotoristaParaViagem(passageiro.getPontuacaoMedia(), catVeiculo, passageiro.getFormaPagamento());
+        CategoriaVeiculo c = CategoriaVeiculo.SIMPLES;
+        if(catVeiculo.equals("Luxo")){
+            c = CategoriaVeiculo.LUXO;
+        }else if(catVeiculo.equals("Normal")){
+            c = CategoriaVeiculo.NORMAL;
+        }
+
+        Motorista motorista = selecaoMotorista.selecionaMotoristaParaViagem(c, passageiro.getPontuacaoMedia(), RepoMotoristas.getInstance(), passageiro.getFormaPagamento());
         Veiculo veiculo = motorista.getVeiculo();
-        double custo = custoViagem.custoViagem(roteiro, veiculo);
-        Viagem viagem = new Viagem(1, LocalDateTime.now(), roteiro, motorista, passageiro, custo);
+
+        double custo = custoViagem.getCusto(roteiro, veiculo.getCat());
+
+        Viagem viagem = new Viagem(999, LocalDateTime.now(), roteiro, motorista, passageiro, custo);
         //Persiste viagem no repositorio de viagens
-        return viagem;
+        viagens.adicionaViagem(viagem);
+
+        return viagem.getId();
     }
 
-
-
-    public boolean informaPontuacaoMotorista(String cpfMotorista) {
-        return false;
-    }
-
-    public boolean informaPontuacaoPassageiro(String cpfPassageiro) {
-        return false;
-    }
-**/
 }
