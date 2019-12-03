@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d455db70-d965-4cb5-a450-92d0b845abaa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/servicos/ServicosMotorista.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/servicos/ServicosPassageiro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaSolicitacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaSolicitacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/DadosDaSolicitacao.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/DadosDaSolicitacao.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tecnicas_pucrs/casos_de_uso/politicas/CalculoCustoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tecnicas_pucrs/casos_de_uso/politicas/CalculoCustoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tecnicas_pucrs/entidades/geometria/AreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tecnicas_pucrs/entidades/geometria/AreaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/Fachada.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/Fachada.class" afterDir="false" />
-    </list>
+    <list default="true" id="d455db70-d965-4cb5-a450-92d0b845abaa" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
