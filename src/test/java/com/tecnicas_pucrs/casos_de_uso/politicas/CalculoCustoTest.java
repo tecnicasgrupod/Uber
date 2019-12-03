@@ -37,8 +37,13 @@ public class CalculoCustoTest {
 
     @DisplayName("Calcula custo de Viagens com PrecoIntegro")
     @ParameterizedTest
-    @CsvSource({"canoas, guajuvira, sapo, SIMPLES, 30",
-            "canoas, sapo, guajuvira, NORMAL, 33"
+    @CsvSource({
+            "porto_alegre, independencia, menino_deus, SIMPLES, 60",
+            "porto_alegre, independencia, menino_deus, NORMAL, 66",
+            "porto_alegre, independencia, menino_deus, LUXO, 69,96",
+            "porto_alegre, bom_fim, menino_deus, NORMAL, 50",
+            "porto_alegre, bom_fim, menino_deus, SIMPLES, 55",
+            "porto_alegre, bom_fim, menino_deus, LUXO, 57,2"
     })
     public void getCustoTestIntegro(String cidade, String bairroOrigem, String bairroDestino, CategoriaVeiculo cat, double respCusto){
         calculoCustoViagem.setPolitica(new PrecoIntegro());
@@ -47,22 +52,27 @@ public class CalculoCustoTest {
         Bairro bd = rb.recuperarPorNome(bairroDestino);
         Roteiro r = new Roteiro(c, bo, bd);
         double observed = calculoCustoViagem.getCusto(r, cat);
-        assertEquals(respCusto, observed);
+        assertEquals(respCusto, observed, 0.0000001);
     }
 
     @DisplayName("Calcula custo de Viagens com DescontoNatal")
     @ParameterizedTest
-    @CsvSource({"canoas, guajuvira, sapo, SIMPLES, 25",
-            "canoas, sapo, guajuvira, NORMAL, 28"
+    @CsvSource({
+            "porto_alegre, agronomia, independencia, SIMPLES, 48",
+            "porto_alegre, agronomia, independencia, NORMAL, 52,8",
+            "porto_alegre, agronomia, independencia, LUXO, 55,968",
+            "porto_alegre, bom_fim, menino_deus, NORMAL, 40",
+            "porto_alegre, bom_fim, menino_deus, SIMPLES, 44",
+            "porto_alegre, bom_fim, menino_deus, LUXO, 45,76"
     })
-    public void getCustoTestNatal(String cidade, String bairroOrigem, String bairroDestino, CategoriaVeiculo cat, double respCusto){
+    public void getCustoTestDescontoNatal(String cidade, String bairroOrigem, String bairroDestino, CategoriaVeiculo cat, double respCusto){
         calculoCustoViagem.setPolitica(new DescontoNatal());
         Cidade c = rc.recuperarPorNome(cidade);
         Bairro bo = rb.recuperarPorNome(bairroOrigem);
         Bairro bd = rb.recuperarPorNome(bairroDestino);
         Roteiro r = new Roteiro(c, bo, bd);
         double observed = calculoCustoViagem.getCusto(r, cat);
-        assertEquals(respCusto, observed);
+        assertEquals(respCusto, observed, 0.0000001);
     }
 
 

@@ -107,10 +107,12 @@ public class Fachada {
         }else if(catVeiculo.equals("Normal")){
             c = CategoriaVeiculo.NORMAL;
         }
+        System.out.println(c);
         Motorista motorista = selecaoMotorista.selecionaMotoristaParaViagem(c, passageiro.getPontuacaoMedia(), RepoMotoristas.getInstance(), passageiro.getFormaPagamento());
         Veiculo veiculo = motorista.getVeiculo();
 
         double custo = custoViagem.getCusto(roteiro, veiculo.getCat());
+        System.out.println(custo);
 
         Viagem viagem = new Viagem(ID_Sequencial_Viagens.getNextId(), LocalDateTime.now(), roteiro, motorista, passageiro, custo);
         //Persiste viagem no repositorio de viagens

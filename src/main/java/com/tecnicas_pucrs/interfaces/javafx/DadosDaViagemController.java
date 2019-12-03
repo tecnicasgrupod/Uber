@@ -2,10 +2,7 @@ package com.tecnicas_pucrs.interfaces.javafx;
 
 
 import com.tecnicas_pucrs.Fachada;
-import com.tecnicas_pucrs.casos_de_uso.politicas.CalculoCustoViagem;
-import com.tecnicas_pucrs.casos_de_uso.politicas.MotoristaEquivalente;
-import com.tecnicas_pucrs.casos_de_uso.politicas.PrecoIntegro;
-import com.tecnicas_pucrs.casos_de_uso.politicas.SeletorDeMotorista;
+import com.tecnicas_pucrs.casos_de_uso.politicas.*;
 import com.tecnicas_pucrs.casos_de_uso.repositorios.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -32,7 +29,7 @@ import java.util.ResourceBundle;
 
 public class DadosDaViagemController implements Initializable {
 
-    private Fachada fachada = new Fachada(new CalculoCustoViagem(new PrecoIntegro()), new SeletorDeMotorista(new MotoristaEquivalente()), RepoBairros.getInstance(), RepoCidades.getInstance(), RepoMotoristas.getInstance(), RepoPassageiros.getInstance(), RepoViagens.getInstance());
+    private Fachada fachada = new Fachada(new CalculoCustoViagem(new PrecoIntegro()), new SeletorDeMotorista(new MelhorMotorista()), RepoBairros.getInstance(), RepoCidades.getInstance(), RepoMotoristas.getInstance(), RepoPassageiros.getInstance(), RepoViagens.getInstance());
 
     @FXML
     private Button btn_finalizar;

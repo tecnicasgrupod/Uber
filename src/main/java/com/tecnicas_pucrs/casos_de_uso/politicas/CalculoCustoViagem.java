@@ -19,6 +19,7 @@ public class CalculoCustoViagem{
     }
 
     public double getCusto(Roteiro roteiro, CategoriaVeiculo categoriaVeiculo){
+        System.out.println(categoriaVeiculo);
         double custo_base = 0;
         for (Bairro b : roteiro.bairrosPercorridos()) {
             custo_base += b.getCustoBasico();

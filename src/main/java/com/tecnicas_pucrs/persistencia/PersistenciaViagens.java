@@ -46,7 +46,7 @@ public class PersistenciaViagens {
                 double custo = Double.parseDouble(csvRecord.get("custo"));
                 String[] Lroteiros = roteiro.split(";");
 
-                Roteiro roteirow = new Roteiro(repoCidades.recuperarPorNome("canoas"), repoBairros.recuperarPorNome(Lroteiros[0]), repoBairros.recuperarPorNome(Lroteiros[1]));
+                Roteiro roteirow = new Roteiro(repoCidades.recuperarPorNome("porto_alegre"), repoBairros.recuperarPorNome(Lroteiros[0]), repoBairros.recuperarPorNome(Lroteiros[1]));
 
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
                 Viagem viagem = new Viagem(id, LocalDateTime.parse(data, formatter),roteirow,motorista,passageiro,custo);

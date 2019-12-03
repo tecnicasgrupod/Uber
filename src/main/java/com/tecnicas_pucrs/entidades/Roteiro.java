@@ -4,6 +4,7 @@ import com.tecnicas_pucrs.entidades.geometria.Ponto;
 import com.tecnicas_pucrs.entidades.geometria.Reta;
 import com.tecnicas_pucrs.entidades.geometria.SituacaoDaReta;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,16 +21,20 @@ public class Roteiro {
     }
 
     public List<Bairro> bairrosPercorridos(){
-        return cidade
-                .getListaDeBairros()
-                .stream()
-                .filter(b->b.getLimites().classifica(this.getRota())!= SituacaoDaReta.TODA_FORA)
-                .collect(Collectors.toList());
+        List<Bairro> percorridos = new ArrayList<>();
+        Reta trajeto = getRota();
+        for (Bairro b : cidade.getListaDeBairros()){
+            if(b.getLimites().classifica(trajeto) != (SituacaoDaReta.TODA_FORA)){
+                percorridos.add(b);
+            }
+        }
+        System.out.println(percorridos);
+        return percorridos;
     }
 
     public Reta getRota(){
         Ponto pOrig = bairroOrigem.getLimites().pontoCentral();
-        Ponto pDest = bairroOrigem.getLimites().pontoCentral();
+        Ponto pDest = bairroDestino.getLimites().pontoCentral();
         return new Reta(pOrig,pDest);
     }
 

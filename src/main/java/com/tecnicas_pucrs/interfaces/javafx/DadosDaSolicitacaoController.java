@@ -94,7 +94,7 @@ public class DadosDaSolicitacaoController implements Initializable {
                 if (fachada.validaPassageiroPorCPF(cpf_passageiro.getText())) {
                     ((Node) (event.getSource())).getScene().getWindow().hide();
                     try {
-                        idViagemAtual = fachada.solicitaVeiculoParaViagem(cpf_passageiro.getText(), "canoas", bairro_origem.getSelectionModel().getSelectedItem().toString(), bairro_destino.getSelectionModel().getSelectedItem().toString(), pagamento.getSelectionModel().getSelectedItem().toString(), categoria.getSelectionModel().getSelectedItem().toString());
+                        idViagemAtual = fachada.solicitaVeiculoParaViagem(cpf_passageiro.getText(), "porto_alegre", bairro_origem.getSelectionModel().getSelectedItem().toString(), bairro_destino.getSelectionModel().getSelectedItem().toString(), pagamento.getSelectionModel().getSelectedItem().toString(), categoria.getSelectionModel().getSelectedItem().toString());
                         Parent root = FXMLLoader.load(getClass().getResource("/views/DadosDaViagem.fxml"));
                         root.setOnMousePressed(new EventHandler<MouseEvent>() {
                             public void handle(MouseEvent event) {

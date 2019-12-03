@@ -12,11 +12,13 @@ public class MelhorMotorista implements PoliticasDeSelecao {
     public Motorista selecionaMotorista(CategoriaVeiculo categoriaVeiculo, double pontuacaoPassageiro, RepoMotoristas repoMotoristas, FormaPagamento formaPagamento) {
         try{
             List<Motorista> listaParcial = repoMotoristas.getMotoristas();
-            listaParcial.removeIf(m -> !m.getFormaPagamento().equals(formaPagamento));
+            listaParcial.removeIf(m -> !m.getFormaPagamento().equals(formaPagamento) && m.getVeiculo().cat.equals(categoriaVeiculo));
             Motorista motorista_selecionado = listaParcial.get(0);
             for (Motorista m : listaParcial){
-                if(motorista_selecionado.getPontuacaoMedia() < m.getPontuacaoMedia()){
-                    motorista_selecionado = m;
+                if(m.getVeiculo().getCat().equals(categoriaVeiculo)){
+                    if(motorista_selecionado.getPontuacaoMedia() < m.getPontuacaoMedia()){
+                        motorista_selecionado = m;
+                    }
                 }
             }
             return motorista_selecionado;
