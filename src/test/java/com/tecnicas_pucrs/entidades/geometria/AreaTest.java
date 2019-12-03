@@ -15,6 +15,13 @@ public class AreaTest{
         area = new Area(new Ponto(10,30),new Ponto(50,10));
     }
 
+
+    /*
+        Aqui o Bernardo testava os proprios bitcodes do CohenSutherland
+        Mudar e testar o nosso  alterando pra testes booleanos com:
+        CohenSutherland.totalmenteDentro / totalmenteFora / Intersect
+        testar com pontos dentro/fora/naLinha  os 3 metodos ^
+     */
     /*
     @DisplayName("Classifica pontos")
     @ParameterizedTest
@@ -34,7 +41,7 @@ public class AreaTest{
             "15,5,35,5,TODA_FORA",
             "5,40,5,10,TODA_FORA",
             "55,40,55,5,TODA_FORA",
-            "30,90,90,20,TODA_FORA",// Erros a partir daqui
+            "30,90,90,20,TODA_FORA",
             "-5,15,15,-20,TODA_FORA"
     })
     public void codRetaTest(int xi,int yi,int xf,int yf,SituacaoDaReta rEsp) {

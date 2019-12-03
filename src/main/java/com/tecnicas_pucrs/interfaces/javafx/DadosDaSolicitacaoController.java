@@ -7,6 +7,8 @@ import com.tecnicas_pucrs.casos_de_uso.politicas.MotoristaEquivalente;
 import com.tecnicas_pucrs.casos_de_uso.politicas.PrecoIntegro;
 import com.tecnicas_pucrs.casos_de_uso.politicas.SeletorDeMotorista;
 import com.tecnicas_pucrs.casos_de_uso.repositorios.*;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -28,6 +30,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class DadosDaSolicitacaoController implements Initializable {
@@ -47,10 +50,10 @@ public class DadosDaSolicitacaoController implements Initializable {
     private TextField cpf_passageiro;
 
     @FXML
-    private TextField bairro_origem;
+    private ChoiceBox bairro_origem;
 
     @FXML
-    private TextField bairro_destino;
+    private ChoiceBox bairro_destino;
 
     @FXML
     private ChoiceBox pagamento;
@@ -63,11 +66,13 @@ public class DadosDaSolicitacaoController implements Initializable {
     private double x;
     private double y;
 
-    public DadosDaSolicitacaoController(){
+    public DadosDaSolicitacaoController() {
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        btn_buscar.setDisable(true);
 
         pagamento.getItems().add("Dinheiro");
         pagamento.getItems().add("Débito");
@@ -77,57 +82,93 @@ public class DadosDaSolicitacaoController implements Initializable {
         categoria.getItems().add("Normal");
         categoria.getItems().add("Luxo");
 
-    btn_buscar.setOnAction(new EventHandler<ActionEvent>() {
-        public void handle(ActionEvent event) {
-            ((Node) (event.getSource())).getScene().getWindow().hide();
-            try {
-                System.out.println(cpf_passageiro.getText());
-                System.out.println(bairro_origem.getText());
-                System.out.println(bairro_destino.getText());
-                System.out.println(pagamento.getSelectionModel().getSelectedItem().toString());
-                System.out.println(categoria.getSelectionModel().getSelectedItem().toString());
-                idViagemAtual = fachada.solicitaVeiculoParaViagem(cpf_passageiro.getText(), "canoas", bairro_origem.getText(), bairro_destino.getText(), pagamento.getSelectionModel().getSelectedItem().toString(), categoria.getSelectionModel().getSelectedItem().toString());
-                Parent root = FXMLLoader.load(getClass().getResource("/views/DadosDaViagem.fxml"));
-                root.setOnMousePressed(new EventHandler<MouseEvent>() {
-                    public void handle(MouseEvent event) {
-                        x = event.getSceneX();
-                        y = event.getSceneY();
-                    }
-                });
-                Scene scene = new Scene(root);
-                Stage stage = new Stage();
-                root.setOnMouseDragged(new EventHandler<MouseEvent>() {
-                    public void handle(MouseEvent event) {
-                        stage.setX(event.getScreenX() - x);
-                        stage.setY(event.getScreenY() - y);
-                    }
-                });
+        List<String> bairros = fachada.recuperaNomeBairros();
 
-                stage.setScene(scene);
-                stage.setTitle("UBER");
-                stage.initStyle(StageStyle.UNDECORATED);
-                stage.initStyle(StageStyle.TRANSPARENT);
-                Image applicationIcon = new Image(getClass().getResourceAsStream("/img/logo.png"));
-                stage.getIcons().add(applicationIcon);
-                stage.setScene(scene);
-                stage.centerOnScreen();
-                stage.show();
-
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        for (String str : bairros) {
+            bairro_origem.getItems().add(str);
+            bairro_destino.getItems().add(str);
         }
-    });
-}
+
+        btn_buscar.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                if (fachada.validaPassageiroPorCPF(cpf_passageiro.getText())) {
+                    ((Node) (event.getSource())).getScene().getWindow().hide();
+                    try {
+                        idViagemAtual = fachada.solicitaVeiculoParaViagem(cpf_passageiro.getText(), "canoas", bairro_origem.getSelectionModel().getSelectedItem().toString(), bairro_destino.getSelectionModel().getSelectedItem().toString(), pagamento.getSelectionModel().getSelectedItem().toString(), categoria.getSelectionModel().getSelectedItem().toString());
+                        Parent root = FXMLLoader.load(getClass().getResource("/views/DadosDaViagem.fxml"));
+                        root.setOnMousePressed(new EventHandler<MouseEvent>() {
+                            public void handle(MouseEvent event) {
+                                x = event.getSceneX();
+                                y = event.getSceneY();
+                            }
+                        });
+                        Scene scene = new Scene(root);
+                        Stage stage = new Stage();
+                        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                            public void handle(MouseEvent event) {
+                                stage.setX(event.getScreenX() - x);
+                                stage.setY(event.getScreenY() - y);
+                            }
+                        });
+
+                        stage.setScene(scene);
+                        stage.setTitle("UBER");
+                        stage.initStyle(StageStyle.UNDECORATED);
+                        stage.initStyle(StageStyle.TRANSPARENT);
+                        Image applicationIcon = new Image(getClass().getResourceAsStream("/img/logo.png"));
+                        stage.getIcons().add(applicationIcon);
+                        stage.setScene(scene);
+                        stage.centerOnScreen();
+                        stage.show();
+
+                    } catch (Exception e) {
+
+                    }
+
+                } else {
+                    cpf_passageiro.setStyle("-fx-border-color: red ; -fx-border-width: 2px ;");
+                }
+            }
+        });
+
+        pagamento.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number number2) {
+                if(!cpf_passageiro.getText().equals("") && !categoria.getSelectionModel().getSelectedItem().toString().equals("") && !bairro_origem.getSelectionModel().getSelectedItem().toString().equals("") && !bairro_destino.getSelectionModel().getSelectedItem().toString().equals(""))
+                btn_buscar.setDisable(false);
+            }
+        });
+
+        categoria.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number number2) {
+                if(!cpf_passageiro.getText().equals("") && !pagamento.getSelectionModel().getSelectedItem().toString().equals("") && !bairro_origem.getSelectionModel().getSelectedItem().toString().equals("") && !bairro_destino.getSelectionModel().getSelectedItem().toString().equals(""))
+                    btn_buscar.setDisable(false);
+            }
+        });
+
+        bairro_origem.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number number2) {
+                if(!cpf_passageiro.getText().equals("") && !categoria.getSelectionModel().getSelectedItem().toString().equals("") && !pagamento.getSelectionModel().getSelectedItem().toString().equals("") && !bairro_destino.getSelectionModel().getSelectedItem().toString().equals(""))
+                    btn_buscar.setDisable(false);
+            }
+        });
+
+        bairro_destino.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number number2) {
+                if(!cpf_passageiro.getText().equals("") && !categoria.getSelectionModel().getSelectedItem().toString().equals("") && !bairro_origem.getSelectionModel().getSelectedItem().toString().equals("") && !pagamento.getSelectionModel().getSelectedItem().toString().equals(""))
+                    btn_buscar.setDisable(false);
+            }
+        });
+    }
 
     public void exit() {
         System.exit(0);
     }
 
     public static int getViagemAtual() {
-
-        System.out.println("Pegou a viagem");
         return idViagemAtual;
     }
 }

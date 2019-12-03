@@ -24,6 +24,17 @@ public class CalculoCustoTest {
 
     }*/
 
+    /*
+    1- Incluir mais bairros em canoas pra testar nos arquivos dat e nos CSVs abaixo
+    2- Os "grupos de teste" são misturas de:
+     SIMPLES + NORMAL + LUXO(com 2 e 3?(mais que 2) bairros de trajeto)
+     DescontoNatal + PrecoIntegro
+     3- padrões:
+      SIMPLES - soma base * politica
+      NORMAL -  soma base + 10% * politica
+      LUXO -    soma base + 10% + 2% (para cada bairro percorrido) * politica
+    */
+
     @DisplayName("Calcula custo de Viagens com PrecoIntegro")
     @ParameterizedTest
     @CsvSource({"canoas, guajuvira, sapo, SIMPLES, 30",
