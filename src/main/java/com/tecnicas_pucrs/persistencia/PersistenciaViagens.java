@@ -1,9 +1,9 @@
 package com.tecnicas_pucrs.persistencia;
 
-import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoBairros;
-import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoCidades;
-import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoMotoristas;
-import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoPassageiros;
+import com.tecnicas_pucrs.interfaces.repositorios.RepoBairros;
+import com.tecnicas_pucrs.interfaces.repositorios.RepoCidades;
+import com.tecnicas_pucrs.interfaces.repositorios.RepoMotoristas;
+import com.tecnicas_pucrs.interfaces.repositorios.RepoPassageiros;
 import com.tecnicas_pucrs.entidades.*;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;

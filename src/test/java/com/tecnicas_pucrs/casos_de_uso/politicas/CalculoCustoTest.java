@@ -1,12 +1,11 @@
 package com.tecnicas_pucrs.casos_de_uso.politicas;
 
-import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoBairros;
-import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoCidades;
+import com.tecnicas_pucrs.interfaces.repositorios.RepoBairros;
+import com.tecnicas_pucrs.interfaces.repositorios.RepoCidades;
 import com.tecnicas_pucrs.entidades.Bairro;
 import com.tecnicas_pucrs.entidades.CategoriaVeiculo;
 import com.tecnicas_pucrs.entidades.Cidade;
 import com.tecnicas_pucrs.entidades.Roteiro;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;

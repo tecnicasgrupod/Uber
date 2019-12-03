@@ -1,7 +1,7 @@
 package com.tecnicas_pucrs.persistencia;
 
 import com.tecnicas_pucrs.entidades.*;
-import com.tecnicas_pucrs.casos_de_uso.repositorios.RepoBairros;
+import com.tecnicas_pucrs.interfaces.repositorios.RepoBairros;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;

@@ -1,14 +1,10 @@
-package com.tecnicas_pucrs.casos_de_uso.repositorios;
+package com.tecnicas_pucrs.interfaces.repositorios;
 
-import com.tecnicas_pucrs.entidades.Cidade;
-import com.tecnicas_pucrs.entidades.Motorista;
-import com.tecnicas_pucrs.entidades.Veiculo;
 import com.tecnicas_pucrs.entidades.Viagem;
 import com.tecnicas_pucrs.persistencia.*;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class RepoViagens {

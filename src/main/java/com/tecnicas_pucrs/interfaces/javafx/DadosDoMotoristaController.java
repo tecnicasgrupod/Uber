@@ -1,9 +1,9 @@
 package com.tecnicas_pucrs.interfaces.javafx;
 
 
-import com.tecnicas_pucrs.Fachada;
+import com.tecnicas_pucrs.casos_de_uso.servicos.Fachada;
 import com.tecnicas_pucrs.casos_de_uso.politicas.*;
-import com.tecnicas_pucrs.casos_de_uso.repositorios.*;
+import com.tecnicas_pucrs.interfaces.repositorios.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;

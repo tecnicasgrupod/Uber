@@ -1,9 +1,9 @@
 package com.tecnicas_pucrs.interfaces.javafx;
 
 
-import com.tecnicas_pucrs.Fachada;
+import com.tecnicas_pucrs.casos_de_uso.servicos.Fachada;
 import com.tecnicas_pucrs.casos_de_uso.politicas.*;
-import com.tecnicas_pucrs.casos_de_uso.repositorios.*;
+import com.tecnicas_pucrs.interfaces.repositorios.*;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -16,11 +16,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -28,7 +25,6 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class AvaliacaoMotoristaController implements Initializable {

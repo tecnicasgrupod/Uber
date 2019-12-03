@@ -1,4 +1,4 @@
-package com.tecnicas_pucrs.casos_de_uso.repositorios;
+package com.tecnicas_pucrs.interfaces.repositorios;
 
 import com.tecnicas_pucrs.entidades.Viagem;
 

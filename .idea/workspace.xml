@@ -3,23 +3,41 @@
   <component name="ChangeListManager">
     <list default="true" id="d455db70-d965-4cb5-a450-92d0b845abaa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/CalculoCustoViagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/CalculoCustoViagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/servicos/Fachada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/MelhorMotorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/MelhorMotorista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/MotoristaEquivalente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/MotoristaEquivalente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Roteiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Roteiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/PoliticasDeSelecao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/PoliticasDeSelecao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/SeletorDeMotorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/politicas/SeletorDeMotorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/ID_Sequencial_Viagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/ID_Sequencial_Viagens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoBairros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoBairros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoCidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoCidades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoMotoristas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoMotoristas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoPassageiros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoPassageiros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoVeiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/RepoViagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/RepoViagens.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/AvaliacaoMotoristaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/AvaliacaoMotoristaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/AvaliacaoPassageiroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/AvaliacaoPassageiroController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaSolicitacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaSolicitacaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaViagemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaViagemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDoMotoristaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDoMotoristaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/IRepoBairros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/IRepoBairros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/IRepoCidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/IRepoCidades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/IRepoMotoristas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/IRepoMotoristas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/IRepoPassageiros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/IRepoPassageiros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/IRepoVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/IRepoVeiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/repositorios/IRepoViagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/casos_de_uso/repositorios/IRepoViagens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaCidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaCidades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaMotoristas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaMotoristas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaViagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/persistencia/PersistenciaViagens.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bairros.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bairros.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cidades.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cidades.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/motoristas.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/motoristas.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/viagens.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/viagens.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/tecnicas_pucrs/casos_de_uso/politicas/CalculoCustoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tecnicas_pucrs/casos_de_uso/politicas/CalculoCustoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tecnicas_pucrs/entidades/geometria/AreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tecnicas_pucrs/entidades/geometria/AreaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/Fachada.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/interfaces/repositorios/IRepoPassageiros.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/interfaces/repositorios/IRepoViagens.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaCidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaCidades.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaMotoristas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaMotoristas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaViagens.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/persistencia/PersistenciaViagens.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +122,7 @@
       <module name="Uber" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.tecnicas_pucrs.*" />
+          <option name="PATTERN" value="com.tecnicas_pucrs.casos_de_uso.servicos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -173,7 +191,7 @@
       <workItem from="1573132096483" duration="1845000" />
       <workItem from="1575144589736" duration="15204000" />
       <workItem from="1575198312254" duration="11509000" />
-      <workItem from="1575371438617" duration="7513000" />
+      <workItem from="1575371438617" duration="8086000" />
     </task>
     <servers />
   </component>
@@ -229,29 +247,29 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="583" y="187" width="424" height="479" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1575155213223" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1575379409942">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1575380058313">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575297334085" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1575379409942" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1575380058313" />
     <state width="1558" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1575379409942">
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1575380058313">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575297334085" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1575379409942" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1575380058313" />
     <state width="1558" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1575379409942">
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1575380058313">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575297334084" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1575379409942" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1575380058313" />
     <state width="1558" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1575379409942">
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1575380058313">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575297334085" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1575379409942" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1575380058313" />
     <state width="1558" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
     <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1575287107566">
       <screen x="0" y="0" width="1536" height="834" />

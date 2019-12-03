@@ -1,6 +1,6 @@
 package com.tecnicas_pucrs;
 
-import com.tecnicas_pucrs.casos_de_uso.repositorios.*;
+import com.tecnicas_pucrs.interfaces.repositorios.*;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -70,15 +70,6 @@ public class App extends Application {
 
         launch(args);
 
-        /**
-         *
-        System.out.println("VEICULOS =>" + repoVeiculos.getVeiculos());
-        System.out.println("MOTORISTAS =>" + repoMotoristas.getMotoristas());
-        System.out.println("PASSAGEIROS =>" + repoPassageiros.getPassageiros());
-        System.out.println("BAIRROS =>" + repoBairros.getBairros());
-        System.out.println("CIDADES =>" + repoCidades.getCidades());
-        System.out.println("VIAGENS =>" + repoViagens.getViagens());
-
         repoVeiculos.persisteVeiculos();
         repoMotoristas.persisteMotoristas();
         repoPassageiros.persistePassageiros();
@@ -86,7 +77,7 @@ public class App extends Application {
         repoCidades.persisteCidades();
         repoViagens.persisteViagens();
 
-         **/
+
 
     }
 }

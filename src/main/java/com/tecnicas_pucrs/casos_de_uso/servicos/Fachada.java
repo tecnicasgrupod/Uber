@@ -1,9 +1,9 @@
-package com.tecnicas_pucrs;
+package com.tecnicas_pucrs.casos_de_uso.servicos;
 
 import com.tecnicas_pucrs.casos_de_uso.politicas.CalculoCustoViagem;
 import com.tecnicas_pucrs.casos_de_uso.politicas.SeletorDeMotorista;
-import com.tecnicas_pucrs.casos_de_uso.repositorios.*;
 import com.tecnicas_pucrs.entidades.*;
+import com.tecnicas_pucrs.interfaces.repositorios.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

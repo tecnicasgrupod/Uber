@@ -1,7 +1,7 @@
-package com.tecnicas_pucrs.casos_de_uso.repositorios;
+package com.tecnicas_pucrs.interfaces.repositorios;
 
+import com.tecnicas_pucrs.casos_de_uso.repositorios.IRepoPassageiros;
 import com.tecnicas_pucrs.entidades.Passageiro;
-import com.tecnicas_pucrs.interfaces.repositorios.IRepoPassageiros;
 import com.tecnicas_pucrs.persistencia.PersistenciaPassageiros;
 
 import java.io.IOException;

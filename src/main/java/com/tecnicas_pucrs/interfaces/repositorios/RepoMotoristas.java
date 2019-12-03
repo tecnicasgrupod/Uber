@@ -1,8 +1,7 @@
-package com.tecnicas_pucrs.casos_de_uso.repositorios;
+package com.tecnicas_pucrs.interfaces.repositorios;
 
+import com.tecnicas_pucrs.casos_de_uso.repositorios.IRepoMotoristas;
 import com.tecnicas_pucrs.entidades.Motorista;
-import com.tecnicas_pucrs.interfaces.repositorios.IRepoMotoristas;
-import com.tecnicas_pucrs.persistencia.PersistenciaBairros;
 import com.tecnicas_pucrs.persistencia.PersistenciaMotoristas;
 
 import java.io.IOException;

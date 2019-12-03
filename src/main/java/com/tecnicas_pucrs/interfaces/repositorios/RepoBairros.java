@@ -1,7 +1,7 @@
-package com.tecnicas_pucrs.casos_de_uso.repositorios;
+package com.tecnicas_pucrs.interfaces.repositorios;
 
+import com.tecnicas_pucrs.casos_de_uso.repositorios.IRepoBairros;
 import com.tecnicas_pucrs.entidades.Bairro;
-import com.tecnicas_pucrs.interfaces.repositorios.IRepoBairros;
 import com.tecnicas_pucrs.persistencia.PersistenciaBairros;
 
 import java.io.IOException;
