@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d455db70-d965-4cb5-a450-92d0b845abaa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Roteiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/entidades/Roteiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/Fachada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaSolicitacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tecnicas_pucrs/interfaces/javafx/DadosDaSolicitacaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/DadosDaSolicitacao.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/DadosDaSolicitacao.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/Fachada.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tecnicas_pucrs/Fachada.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +151,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b67ec47f-df1f-4304-bc4b-b6abc508730d" name="Default Changelist" comment="" />
+      <changelist id="d455db70-d965-4cb5-a450-92d0b845abaa" name="Default Changelist" comment="" />
       <created>1572958505894</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -157,6 +160,7 @@
       <workItem from="1573132096483" duration="1845000" />
       <workItem from="1575144589736" duration="15204000" />
       <workItem from="1575198312254" duration="11509000" />
+      <workItem from="1575335740344" duration="2811000" />
     </task>
     <servers />
   </component>
@@ -212,26 +216,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="583" y="187" width="424" height="479" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1575155213223" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1575297334085">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1257" height="165" key="GridCell.Tab.0.bottom" timestamp="1575338302287">
+      <screen x="67" y="25" width="1299" height="713" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575297334085" />
     <state width="1558" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1575297334085">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1257" height="165" key="GridCell.Tab.0.bottom/67.25.1299.713@67.25.1299.713" timestamp="1575338302287" />
+    <state width="1257" height="165" key="GridCell.Tab.0.center" timestamp="1575338302286">
+      <screen x="67" y="25" width="1299" height="713" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575297334085" />
     <state width="1558" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1575297334084">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1257" height="165" key="GridCell.Tab.0.center/67.25.1299.713@67.25.1299.713" timestamp="1575338302286" />
+    <state width="1257" height="165" key="GridCell.Tab.0.left" timestamp="1575338302286">
+      <screen x="67" y="25" width="1299" height="713" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575297334084" />
     <state width="1558" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1575297334085">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1257" height="165" key="GridCell.Tab.0.left/67.25.1299.713@67.25.1299.713" timestamp="1575338302286" />
+    <state width="1257" height="165" key="GridCell.Tab.0.right" timestamp="1575338302286">
+      <screen x="67" y="25" width="1299" height="713" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575297334085" />
     <state width="1558" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575162420233" />
+    <state width="1257" height="165" key="GridCell.Tab.0.right/67.25.1299.713@67.25.1299.713" timestamp="1575338302286" />
     <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1575287107566">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -240,6 +248,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="59" key="SettingsEditor/0.0.1536.834/1920.0.1680.1020@0.0.1536.834" timestamp="1575209665670" />
+    <state x="399" y="209" key="com.intellij.ide.util.TipDialog" timestamp="1575335750144">
+      <screen x="67" y="25" width="1299" height="713" />
+    </state>
+    <state x="399" y="209" key="com.intellij.ide.util.TipDialog/67.25.1299.713@67.25.1299.713" timestamp="1575335750144" />
     <state x="557" y="262" key="git4idea.ui.GitTagDialog" timestamp="1575223746638">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
